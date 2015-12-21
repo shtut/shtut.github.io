@@ -1,0 +1,327 @@
+/*Whole page definitions*/
+
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 65%;
+  background-color: white;
+  margin:0;
+  padding:0;
+}
+
+li{
+  list-style: none;
+
+}
+
+a{
+  color: inherit;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+
+h3{
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.container{
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+/*Navbar definitions*/
+
+.navbar li{
+  display: inline;
+  text-transform: uppercase;
+  width: auto;
+  vertical-align: text-bottom;
+  padding: 5px;
+   
+}
+
+.divider{
+  background: url("./img/divider.png") center center no-repeat;
+  height: 150%;
+}
+
+.nav, .logo{
+  //width: auto;
+  display: block;
+  left: 0;
+  height: 17px;
+}
+
+.nav{
+  padding-top: 60px;
+}
+
+.logo{
+  padding-top: 10px;
+}
+
+.rightMenu{
+  width: 180px;
+  padding-top: 10px;
+  display: block;
+  vertical-align: baseline;
+}
+
+
+.loginMenu, .searchBG{
+  width: auto;
+  display: inline;
+}
+.loginMenu{
+	padding-top: 5px;
+  border: none;
+
+}
+.searchBar{
+	margin-top: 40px;
+  border: 1px solid hsl(0, 0%, 82%);
+  border-radius: 5px;
+}
+
+.searchBar .submit{
+  background: url("./img/searchBtn.png") no-repeat scroll center center;
+  border: none;
+  width: 26px;
+  height: 21px;
+}
+
+.searchBar .inputText{
+  background: url("./img/divider.png") no-repeat scroll right 0px;
+  border: none;
+  overflow: hidden;
+  padding: 2px 5px;
+}
+
+.searchBar .inputText input {
+    background: none;
+    border: none;
+    display: block;
+    color: hsl(67, 5%, 33%);
+    width: 100%;
+}
+
+
+.square{
+  width: 30%;
+  min-height: 1px;
+  margin-left: 20px;
+}
+
+
+#top, #whatCan, #happening{
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+  width: 100%;
+  padding: 0 0 10px 0;
+}
+
+#pink, #green, #orange{
+  opacity: 0.9;
+  width: 27%;
+  height: 7em;
+  padding: 20px 15px 20px 15px;
+  margin-right: 34px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px 0 gray;
+  font-size: 1.2em;
+  color: white;
+  text-transform: capitalize;
+}
+
+#pink{
+  background-color: #fb429e;
+}
+
+#green{
+  background-color: #6ac032;
+}
+
+#orange{
+  background-color: #ff7518;
+}
+
+#whatCan{
+  background-image: url(./img/weDoBG.png), radial-gradient(at 50% 50%, rgb(89, 190, 219) 0%, rgb(51, 153, 204) 100%);
+  color: white;
+  height: 365px;
+}
+
+.whatCanItems ul{
+  padding-bottom: 50px;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+
+.whatCanItems li{
+  display: block;
+  width: 150px;
+  margin-top: 0px;
+  margin-right: auto;
+  text-align: center;
+}
+
+#happening{
+  background-image: url(./img/news-and-events-bg.jpg);
+  background-position: top center;
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+}
+.slides li {
+  //font-size: 100px;
+  margin: 0;
+  padding: 0;
+  //width: 100%;
+  display: none;
+}
+
+.slideMachine {
+  font-size: 14px;
+  width: 100px;
+  margin: 1em;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  display: none;
+}
+
+.active {
+  //height: 130px;
+}
+
+.active li.current {
+  display: inline;
+}
+
+.slides p , .squares{
+}
+
+/*.bottomMenu{
+  height: 302px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+*/
+footer{
+  background-image: url(./img/footerPattern.png);
+  color: white;
+}
+
+.footerCenter, .topFooterCenter{
+}
+
+.copyrightMenu{
+  bottom: 0;
+  left: 0;
+}
+
+.copyright{
+  color: rgb(128,128,128);
+  display: inline;
+
+}
+
+.copyright li{
+  padding-right: 8px;
+  display: inline;
+}
+
+.bottomMenu{
+  width: 60%;
+  overflow: hidden;
+}
+.bottomMenu a{
+  display: block;
+}
+
+.footerRightMenu{
+  background-color: rgba(133,133,133,0.5);
+  width: 30%;
+  padding: 25px 20px 0;
+  overflow: hidden;
+}
+
+.rightMenu h3{
+  color: #4ea7d3;
+
+}
+
+footer h3{
+  font-size: 1.6em;
+}
+
+/********************successStories***********/
+
+#successStories{
+  background-color:#ECECEC;
+  height:512px;
+  overflow: hidden;
+}
+
+#successStories ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#successStories li{
+  padding: 5px;
+}
+
+#successStories li a{
+  display: block;
+}
+
+.sub div{
+  height: 95px;
+  width: 105px;
+  padding: 0px;
+  background-color: white;
+  overflow: hidden;
+  border: 5px;
+  border-color: #3399cc;
+  position: relative;
+}
+
+.sub img{
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%; 
+  transform: translate(0, -50%);
+
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.5;
+  
+  transition: -webkit-filter, opacity 150ms linear;
+}
+
+.sub img:hover{
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+  transition: -webkit-filter, opacity 150ms linear;
+}
+
+
+
+
