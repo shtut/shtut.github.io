@@ -36,8 +36,6 @@ h3{
   width: 940px;
   margin: 0 auto;
   padding: 0;
-  overflow: hidden;
-  position: relative;
 }
 
 .day{
@@ -52,6 +50,12 @@ h3{
 
 
 /*Navbar definitions*/
+
+#top{
+  overflow: hidden;
+  background-color: white;
+  z-index: 500;
+}
 
 .navbar li{
   display: inline;
@@ -118,7 +122,7 @@ h3{
 .searchBar .inputText{
   background: url("./img/divider.png") no-repeat scroll right 0px;
   border: none;
-  overflow: hidden;
+
   padding: 2px 5px;
 }
 
@@ -144,12 +148,16 @@ h3{
 }
 
 
-#top, #whatCan, #happening{
+#top, #whatCan, #happening, #slideMachine, #successStories, footer{
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
   width: 100%;
-  padding: 0 0 10px 0;
+  padding: 10px 0 10px 0;
+  position: relative;
 }
 
+#whatCan, #happening, #slideMachine, #successStories, footer{
+
+  }
 
 #pink, #green, #orange{
   
@@ -162,12 +170,12 @@ h3{
   
 }
 
-.square .bottom{
+.square .bottomText{
 	position: absolute;
 	bottom:0;
 }
 
-.square .bottom img{
+.square .bottomText img{
 	vertical-align: middle;
 	padding-right: 10px;
 }
@@ -189,11 +197,12 @@ h3{
   background-image: url(./img/weDoBG.png), radial-gradient(at 50% 50%, rgb(89, 190, 219) 0%, rgb(51, 153, 204) 100%);
   color: white;
   height: 365px;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
 }
 
 .whatCanItems ul{
   padding-bottom: 50px;
-  overflow: hidden;
+
   vertical-align: baseline;
   }
 
@@ -217,10 +226,13 @@ h3{
 #happening{
   background-image: url(./img/news-and-events-bg.jpg);
   background-position: top center;
+  height: 400px;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
 }
 
 #happening .square{
 	padding: 15px 10px 10px 15px;
+
 }
 
 #happening .inner{
@@ -231,19 +243,35 @@ h3{
 }
 
 #happening .date{
-	background-color: #4ea7d3;
+	background-color: #3399cc;
 	color: white;
 	float: left;
-	padding: 5px;
+	margin-right: 10px;
 	border-radius: 1px;
+  height: 100px;
+  width: 66px;
+  padding: 10px;
 }
+
+#happening .day{
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: hsl(0, 100%, 100%);
+  height: 66px;
+}
+
+#happening .month{
+  height: 33px;
+}
+
+
 
 /*********************slides**********************/
 
 #slideMachine{
 	background-image: url(./img/slide-bg-complexity.jpg);
 	background-position: center top;
-    background-size: 100% auto;
+  background-size: 100% auto;
 	padding: 0;
 	height: 0;
 	padding-bottom: 25%;
@@ -251,8 +279,9 @@ h3{
 }
 
 .squareContainer{
-	position: absolute;
-	bottom: 0;
+  padding-top: 250px;
+  padding-bottom: 15px;
+
 }
 
 
@@ -273,7 +302,7 @@ h3{
   width: 100px;
   margin: 1em;
   border: 1px solid #ccc;
-  overflow: hidden;
+
   display: none;
 }
 
@@ -290,11 +319,7 @@ h3{
 footer{
   background-image: url(./img/footerPattern.png);
   color: white;
-}
-
-.copyrightMenu{
-  bottom: 0;
-  left: 0;
+  overflow: hidden;
 }
 
 .copyright{
@@ -314,7 +339,7 @@ footer{
 .footerRightMenu{
   background-color: rgba(133,133,133,0.5);
   padding: 25px 20px 0;
-  overflow: hidden;
+  position: relative;
   float:right;
   width:190px;
 }
@@ -322,7 +347,6 @@ footer{
 .footerLeftMenu{
 	float: left;
 	width: 700px;
-	overflow: hidden;
 }
 
 .footerLeftMenu li{
@@ -348,13 +372,13 @@ footer h3{
 #successStories{
   background-color:#ECECEC;
   height:512px;
-  overflow: hidden;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
 }
 
 #successStories ul{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+
 }
 
 #successStories li{
@@ -371,7 +395,7 @@ footer h3{
   width: 105px;
   padding: 0px;
   background-color: white;
-  overflow: hidden;
+
   border: 5px;
   border-color: #3399cc;
   position: relative;
