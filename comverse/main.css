@@ -148,16 +148,12 @@ h3{
 }
 
 
-#top, #whatCan, #happening, #slideMachine, #successStories, footer{
+#top, #whatCan, #happening, #slideMachine, #successStories{
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
   width: 100%;
   padding: 10px 0 10px 0;
   position: relative;
 }
-
-#whatCan, #happening, #slideMachine, #successStories, footer{
-
-  }
 
 #pink, #green, #orange{
   
@@ -320,6 +316,7 @@ footer{
   background-image: url(./img/footerPattern.png);
   color: white;
   overflow: hidden;
+  position: relative;
 }
 
 .copyright{
@@ -354,8 +351,9 @@ footer{
 	float: left;
 }
 
-.footerLeftMenu a{
+.FooterCenter a{
 	display: block;
+  padding: 5px;
 }
 
 .footerRightMenu h3{
@@ -364,7 +362,8 @@ footer{
 }
 
 footer h3{
-  font-size: 1.6em;
+  //font-size: 1.6em;
+  text-align: left;
 }
 
 /********************successStories***********/
