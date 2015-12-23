@@ -36,6 +36,7 @@ h3{
   width: 940px;
   margin: 0 auto;
   padding: 0;
+  height: 100%;
 }
 
 .day{
@@ -138,17 +139,23 @@ h3{
 
 .square{
   min-height: 1px;
-  margin-left: 20px;
   position: relative;
   opacity: 0.9;
-  width: 27%;
+  width: 25%;
   height: 130px;
-  margin-right: 10px;
+  margin-right: 20px;
   float: left;
+  padding: 15px 10px 10px 15px;
+}
+
+.squareContainer{
+	position: absolute;
+	bottom: 0;
+	width: inherit;
 }
 
 
-#top, #whatCan, #happening, #slideMachine, #successStories{
+#top, #whatCan, #happening, #successStories{
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
   width: 100%;
   padding: 10px 0 10px 0;
@@ -161,9 +168,7 @@ h3{
   box-shadow: 0 1px 3px 0 gray;
   font-size: 1.5em;
   color: white;
-  text-transform: capitalize;
-  padding: 15px 10px 10px 15px;
-  
+  text-transform: capitalize;  
 }
 
 .square .bottomText{
@@ -189,6 +194,8 @@ h3{
   background-color: #ff7518;
 }
 
+/********************what can we do *******************/
+
 #whatCan{
   background-image: url(./img/weDoBG.png), radial-gradient(at 50% 50%, rgb(89, 190, 219) 0%, rgb(51, 153, 204) 100%);
   color: white;
@@ -204,7 +211,6 @@ h3{
 
 .whatCanItems li{
   display: block;
-  width: 150px;
   padding-top: 0px;
   padding-right: auto;
   text-align: center;
@@ -227,7 +233,7 @@ h3{
 }
 
 #happening .square{
-	padding: 15px 10px 10px 15px;
+	//padding: 15px 10px 10px 15px;
 
 }
 
@@ -263,21 +269,29 @@ h3{
 
 
 /*********************slides**********************/
-
+/*
 #slideMachine{
 	background-image: url(./img/slide-bg-complexity.jpg);
 	background-position: center top;
-  background-size: 100% auto;
+	background-size: 100% auto;
 	padding: 0;
 	height: 0;
 	padding-bottom: 25%;
 	
 }
+*/
+#slideMachine{
+	z-index: -10;
+	position: relative;
+}
 
-.squareContainer{
-  padding-top: 250px;
+.slideMachine{
   padding-bottom: 15px;
-
+  position: absolute;
+	width: auto;
+	display: block;
+	z-index: 90;
+	bottom: 0;
 }
 
 
@@ -289,82 +303,23 @@ h3{
   //font-size: 100px;
   margin: 0;
   padding: 0;
-  //width: 100%;
+  width: 100%;
   display: none;
 }
 
-.slideMachine {
-  font-size: 14px;
-  width: 100px;
-  margin: 1em;
-  border: 1px solid #ccc;
-
-  display: none;
+.slides{
+	height: auto;
 }
 
-.active {
-  //height: 130px;
+.slides .current{
+	background-image: url(./img/slide-bg-complexity.jpg);
+	background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+	display: inline-block;
+	height: 450px;
 }
 
-.active li.current {
-  display: inline;
-}
-
-/************************footer definitions********/
-
-footer{
-  background-image: url(./img/footerPattern.png);
-  color: white;
-  overflow: hidden;
-  position: relative;
-}
-
-.copyright{
-  color: rgb(128,128,128);
-  clear: both;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.copyright li{
-  padding-right: 8px;
-  display: inline;
-  
-}
-
-.footerRightMenu{
-  background-color: rgba(133,133,133,0.5);
-  padding: 25px 20px 0;
-  position: relative;
-  float:right;
-  width:190px;
-}
-
-.footerLeftMenu{
-	float: left;
-	width: 700px;
-}
-
-.footerLeftMenu li{
-	display: inline;
-	float: left;
-}
-
-.FooterCenter a{
-	display: block;
-  padding: 5px;
-}
-
-.footerRightMenu h3{
-  color: #4ea7d3;
-
-}
-
-footer h3{
-  //font-size: 1.6em;
-  text-align: left;
-}
 
 /********************successStories***********/
 
@@ -423,6 +378,83 @@ footer h3{
   transition: -webkit-filter, opacity 150ms linear;
 }
 
+/************************footer definitions********/
+
+footer{
+  background-image: url(./img/footerPattern.png);
+  color: white;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+.copyright{
+  color: rgb(128,128,128);
+  clear: both;
+  position: absolute;
+  bottom: 0;
+}
+
+.copyright li{
+  padding-right: 8px;
+  display: inline;
+  
+}
+
+.footerRightMenu{
+  background-color: rgba(133,133,133,0.5);
+  padding: 25px 20px 0;
+  position: relative;
+  float:right;
+  width:190px;
+  height: 100%;
+}
+
+.footerLeftMenu{
+	float: left;
+	width: 700px;
+}
+
+.footerLeftMenu li{
+	display: inline;
+	float: left;
+}
+
+.FooterCenter a{
+	display: block;
+  padding: 5px;
+}
+
+.footerRightMenu h3{
+  color: #4ea7d3;
+
+}
+
+.socialMediaLinks{
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 35px;
+}
+
+footer h3{
+  //font-size: 1.6em;
+  text-align: left;
+}
+
+footer .date, .blogPost{
+	float: left;
+}
+
+.blogPost{
+	border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: hsl(0, 100%, 100%);
+  padding: 10px;
+}
+
+.subscribe{
+	padding: 10px;
+}
 
 
 
