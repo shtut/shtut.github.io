@@ -2,7 +2,7 @@
 
 body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 65%;
+  font-size: 90%;
   background-color: white;
   margin:0;
   padding:0;
@@ -142,7 +142,7 @@ h3{
   position: relative;
   opacity: 0.9;
   width: 25%;
-  height: 130px;
+  height: auto;
   margin-right: 20px;
   float: left;
   padding: 15px 10px 10px 15px;
@@ -166,15 +166,19 @@ h3{
   
   border-radius: 6px;
   box-shadow: 0 1px 3px 0 gray;
-  font-size: 1.5em;
+  //font-size: 1.5em;
   color: white;
   text-transform: capitalize;  
+  height: 130px;
 }
 
 .square .bottomText{
 	position: absolute;
 	bottom:0;
+	padding-top: inherit;
+	padding-top: 20px;
 }
+
 
 .square .bottomText img{
 	vertical-align: middle;
@@ -228,13 +232,22 @@ h3{
 #happening{
   background-image: url(./img/news-and-events-bg.jpg);
   background-position: top center;
+  background-size: cover;
   height: 400px;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
 }
 
 #happening .square{
-	//padding: 15px 10px 10px 15px;
+	height: 220px;
 
+}
+
+.hideHeader{
+	color: transparent;
+}
+
+#happening .square h3{
+	text-align: left;
 }
 
 #happening .inner{
@@ -244,15 +257,17 @@ h3{
 	border-radius: 3px;
 }
 
+
 #happening .date{
 	background-color: #3399cc;
 	color: white;
 	float: left;
 	margin-right: 10px;
-	border-radius: 1px;
-  height: 100px;
-  width: 66px;
-  padding: 10px;
+	border-radius: 2px;
+	height: 100px;
+	width: 66px;
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.50) inset;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.30);
 }
 
 #happening .day{
@@ -260,6 +275,7 @@ h3{
   border-bottom-style: dotted;
   border-bottom-color: hsl(0, 100%, 100%);
   height: 66px;
+  line-height: 66px;
 }
 
 #happening .month{
@@ -349,10 +365,11 @@ h3{
   width: 105px;
   padding: 0px;
   background-color: white;
-
+  float: left;
   border: 5px;
   border-color: #3399cc;
   position: relative;
+  clear: left;
 }
 
 .sub img{
@@ -378,6 +395,13 @@ h3{
   transition: -webkit-filter, opacity 150ms linear;
 }
 
+.main div{
+	width: inherit;
+	float: left;
+	
+	background-color: white;
+}
+
 /************************footer definitions********/
 
 footer{
@@ -386,6 +410,7 @@ footer{
   overflow: hidden;
   position: relative;
   height: 400px;
+  clear: both;
 }
 
 .copyright{
@@ -436,7 +461,7 @@ footer{
 	padding-bottom: 35px;
 }
 
-footer h3{
+.footerLeftMenu h3{
   //font-size: 1.6em;
   text-align: left;
 }
@@ -445,11 +470,17 @@ footer .date, .blogPost{
 	float: left;
 }
 
+footer .date{
+	padding-right: 10px;
+}
+
+footer 
+
 .blogPost{
 	border-bottom-width: 1px;
-  border-bottom-style: dotted;
-  border-bottom-color: hsl(0, 100%, 100%);
-  padding: 10px;
+	border-bottom-style: dotted;
+	border-bottom-color: hsl(0, 100%, 100%);
+	padding: 10px;
 }
 
 .subscribe{
