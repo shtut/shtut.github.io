@@ -243,11 +243,17 @@ h3{
   float: left;
   width: 150px;
   margin: auto;
+  position: relative;
+  display:​ table;
 }
 
-.whatCanItems li img{
+.whatCanImage{
+  display: table-cell;
+  vertical-align: bottom;
+}
 
-
+.whatCanImage p{
+  margin-top: 150px;
 }
 
 .whatCanItems li :hover{
@@ -589,6 +595,127 @@ footer
 
 .subscribe{
 	padding: 10px;
+}
+
+
+/****************************************/
+
+#im1{
+  background-image: url("./img/solution_icon_smart-money.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+#im1:hover{
+  background-image: url("./img/solution_icon_smart-money_hover.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+/*********/
+
+#im2{
+  background-image: url("./img/solution_icon_biz-analitics.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+#im2:hover{
+  background-image: url("./img/solution_icon_biz-analitics_hover.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+/*********/
+
+#im3{
+  background-image: url("./img/solution_icon_optimize-efficnt.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+#im3:hover{
+  background-image: url("./img/solution_icon_optimize-efficnt_hover.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+/*********/
+
+#im4{
+  background-image: url("./img/solution_icon_personal.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+#im4:hover{
+  background-image: url("./img/solution_icon_personal_hover.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+/*********/
+
+#im5{
+  background-image: url("./img/solution_icon_biz-transform.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+#im5:hover{
+  background-image: url("./img/solution_icon_biz-transform_hover.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+/*********/
+
+#im6{
+  background-image: url("./img/solution_icon_diti-cx.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+#im6:hover{
+  background-image: url("./img/solution_icon_diti-cx_hover.png");
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
 }
 
 
