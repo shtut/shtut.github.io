@@ -8,6 +8,10 @@ body{
   padding:0;
 }
 
+ul{
+  -webkit-padding-start: 0px;
+}
+
 li{
   list-style: none;
 
@@ -37,6 +41,7 @@ h3{
   margin: 0 auto;
   padding: 0;
   height: 100%;
+  position: relative;
 }
 
 .day{
@@ -55,7 +60,7 @@ h3{
 #top{
   overflow: hidden;
   background-color: white;
-  z-index: 500;
+  z-index: 10;
 }
 
 .navbar li{
@@ -63,8 +68,7 @@ h3{
   text-transform: uppercase;
   width: auto;
   vertical-align: text-bottom;
-  padding: 5px;
-   
+  padding: 3px;
 }
 
 .divider{
@@ -75,6 +79,7 @@ h3{
 .nav, .logo{
   //width: auto;
   display: block;
+
   left: 0;
   height: 17px;
   float: left;
@@ -83,6 +88,7 @@ h3{
 
 .nav{
   padding-top: 60px;
+
 }
 
 .logo{
@@ -95,6 +101,10 @@ h3{
   display: block;
   vertical-align: baseline;
   float: right;
+}
+
+.language{
+  
 }
 
 
@@ -118,13 +128,14 @@ h3{
   border: none;
   width: 26px;
   height: 21px;
+  float: right;
 }
 
 .searchBar .inputText{
   background: url("./img/divider.png") no-repeat scroll right 0px;
-  border: none;
-
-  padding: 2px 5px;
+    border: none;
+    overflow: hidden;
+    padding: 2px 5px;
 }
 
 .searchBar .inputText input {
@@ -141,18 +152,29 @@ h3{
   min-height: 1px;
   position: relative;
   opacity: 0.9;
-  width: 25%;
+  width: 28%;
   height: auto;
   margin-right: 20px;
   float: left;
   padding: 15px 10px 10px 15px;
+  transition: -webkit-filter, opacity 150ms linear;
+}
+
+.square:hover{
+  opacity: 1;
+  transition: -webkit-filter, opacity 150ms linear;
 }
 
 .squareContainer{
 	position: absolute;
 	bottom: 0;
 	width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
 }
+
+
 
 
 #top, #whatCan, #happening, #successStories{
@@ -219,10 +241,13 @@ h3{
   padding-right: auto;
   text-align: center;
   float: left;
+  width: 150px;
+  margin: auto;
 }
 
 .whatCanItems li img{
-  margin: auto;
+
+
 }
 
 .whatCanItems li :hover{
@@ -233,6 +258,7 @@ h3{
   background-image: url(./img/news-and-events-bg.jpg);
   background-position: top center;
   background-size: cover;
+  background-attachment: fixed;
   height: 400px;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
 }
@@ -297,7 +323,6 @@ h3{
 }
 */
 #slideMachine{
-	z-index: -10;
 	position: relative;
 }
 
@@ -306,7 +331,6 @@ h3{
   position: absolute;
 	width: auto;
 	display: block;
-	z-index: 90;
 	bottom: 0;
 }
 
@@ -329,9 +353,10 @@ h3{
 
 .slides .current{
 	background-image: url(./img/slide-bg-complexity.jpg);
-	background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center;
+	background-size: cover;                     
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 	display: inline-block;
 	height: 450px;
 }
@@ -348,12 +373,22 @@ h3{
 #successStories ul{
     margin: 0;
     padding: 0;
+    width: 345px;
+    height: 323px;
+    float: left;
 
 }
+
+#successStories .ulSmall{
+  width: 230px;
+  overflow: hidden;
+}
+
 
 #successStories li{
   padding: 5px;
   float: left;
+
 }
 
 #successStories li a{
@@ -366,20 +401,19 @@ h3{
   padding: 0px;
   background-color: white;
   float: left;
-  border: 5px;
-  border-color: #3399cc;
   position: relative;
   clear: left;
+  overflow: hidden;
 }
 
 .sub img{
   display: block;
-  max-width: 100%;
   margin: auto;
   vertical-align: middle;
   position: absolute;
   top: 50%; 
-  transform: translate(0, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
@@ -396,10 +430,76 @@ h3{
 }
 
 .main div{
-	width: inherit;
 	float: left;
-	
+	//overflow: hidden;
 	background-color: white;
+}
+
+.mainDiv{
+  height: 170px;
+  padding: 10px;
+}
+
+.name{
+  color: #4ea7d3;
+  text-transform: uppercase;
+  margin: 0;
+  overflow: hidden;
+}
+
+.position{
+  margin: 0;
+  overflow: hidden;
+}
+
+.companyLogo{
+  float: right;
+  height: auto;
+  width: 70px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.5;
+  
+  transition: -webkit-filter, opacity 150ms linear;
+
+}
+
+.companyLogo:hover{
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+  transition: -webkit-filter, opacity 150ms linear;
+}
+
+.pinfo{
+  float: left;
+  height: 100%;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mainTop{
+  height: 75%;
+  padding-bottom: 10px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: lightgray;
+}
+
+.mainTop p{
+  margin: 0;
+}
+
+.mainTop img{
+  float: left;
+  padding-right: 10px;
+}
+
+.mainBottom{
+  height: 25%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /************************footer definitions********/
@@ -411,6 +511,10 @@ footer{
   position: relative;
   height: 400px;
   clear: both;
+}
+
+footer .square{
+  padding:0;
 }
 
 .copyright{
