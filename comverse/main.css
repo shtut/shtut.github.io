@@ -30,10 +30,26 @@ a:hover, a:active {
 }
 
 
-h3{
+h1{
   text-transform: uppercase;
   color: white;
   text-align: center;
+  font-size: 4em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  font-weight: lighter;
+}
+
+h4{
+  font-size: 1.3em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+span{
+  font-weight: bolder;
 }
 
 .container{
@@ -55,7 +71,55 @@ h3{
 }
 
 
-/*Navbar definitions*/
+.square{
+  min-height: 1px;
+  position: relative;
+  opacity: 0.9;
+  width: 28%;
+  height: auto;
+  margin-right: 20px;
+  float: left;
+  padding: 15px 10px 10px 15px;
+  transition: -webkit-filter, opacity 150ms linear;
+}
+
+.square:hover{
+  opacity: 1;
+  transition: -webkit-filter, opacity 150ms linear;
+}
+
+.squareContainer{
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+#top, #whatCan, #happening, #successStories{
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+  width: 100%;
+  padding: 10px 0 10px 0;
+  position: relative;
+}
+
+
+.square .bottomText{
+  position: absolute;
+  bottom:0;
+  padding-top: inherit;
+  padding-top: 20px;
+}
+
+
+.square .bottomText img{
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+
+/******************************top definitions********************************/
 
 #top{
   overflow: hidden;
@@ -104,11 +168,6 @@ h3{
   float: right;
 }
 
-.language{
-  
-}
-
-
 .loginMenu, .searchBG{
   width: auto;
   display: inline;
@@ -147,67 +206,26 @@ h3{
     width: 100%;
 }
 
-/**********************end of navbar definitions********/
+/******************************slides definitions********************************/
 
-.square{
-  min-height: 1px;
-  position: relative;
-  opacity: 0.9;
-  width: 28%;
-  height: auto;
-  margin-right: 20px;
-  float: left;
-  padding: 15px 10px 10px 15px;
-  transition: -webkit-filter, opacity 150ms linear;
-}
-
-.square:hover{
-  opacity: 1;
-  transition: -webkit-filter, opacity 150ms linear;
-}
-
-.squareContainer{
-	position: absolute;
-	bottom: 0;
-	width: inherit;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: visible;
-}
-
-
-
-
-#top, #whatCan, #happening, #successStories{
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
-  width: 100%;
-  padding: 10px 0 10px 0;
+#slideMachine{
   position: relative;
 }
 
-#pink, #green, #orange{
-  
+#slideMachine h1{
+  text-align: left;
+  text-transform: capitalize;
+}
+
+#slideMachine .square{
+  height: 150px;
+  font-size: 1.2em;
   border-radius: 6px;
   box-shadow: 0 1px 3px 0 gray;
-  //font-size: 1.5em;
   color: white;
   text-transform: capitalize;  
   height: 130px;
 }
-
-.square .bottomText{
-	position: absolute;
-	bottom:0;
-	padding-top: inherit;
-	padding-top: 20px;
-}
-
-
-.square .bottomText img{
-	vertical-align: middle;
-	padding-right: 10px;
-}
-
 
 #pink{
   background-color: #fb429e;
@@ -221,13 +239,59 @@ h3{
   background-color: #ff7518;
 }
 
-/********************what can we do *******************/
+.slide{
+  color: white;
+}
+
+.slides span{
+  font-weight: bolder;
+}
+
+.slideMachine{
+  padding-bottom: 15px;
+  position: absolute;
+  width: auto;
+  display: block;
+  bottom: 0;
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+}
+.slides li {
+  //font-size: 100px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: none;
+}
+
+.slides{
+  height: auto;
+}
+
+.slides .current{
+  background-image: url(./img/slide-bg-complexity.jpg);             
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: inline-block;
+  height: 550px;
+}
+
+/******************************what can definitions********************************/
 
 #whatCan{
   background-image: url(./img/weDoBG.png), radial-gradient(at 50% 50%, rgb(89, 190, 219) 0%, rgb(51, 153, 204) 100%);
   color: white;
   height: 365px;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
+}
+
+#whatCan a:hover{
+  text-decoration: none;
 }
 
 .whatCanItems ul{
@@ -251,16 +315,87 @@ h3{
 .whatCanImage{
   display: table-cell;
   vertical-align: bottom;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  width: 150px;
+  height: 150px;
+  
+  transition: -webkit-filter, background-image 150ms linear;
+}
+
+.whatCanImage:hover{
+  background-repeat:   no-repeat;
+  background-position: center center;
+
+  transition: -webkit-filter, background-image 150ms linear;
 }
 
 .whatCanImage p{
   margin-top: 150px;
 }
 
-.whatCanItems li :hover{
-  text-decoration: underline;
+/******individual background images*/
+
+#im1{
+  background-image: url("./img/solution_icon_smart-money.png");
 }
-/*************************happening***************/
+
+#im1:hover{
+  background-image: url("./img/solution_icon_smart-money_hover.png");
+}
+
+/*********/
+
+#im2{
+  background-image: url("./img/solution_icon_biz-analitics.png");
+}
+
+#im2:hover{
+  background-image: url("./img/solution_icon_biz-analitics_hover.png");
+}
+
+/*********/
+
+#im3{
+  background-image: url("./img/solution_icon_optimize-efficnt.png");
+}
+
+#im3:hover{
+  background-image: url("./img/solution_icon_optimize-efficnt_hover.png");
+}
+
+/*********/
+
+#im4{
+  background-image: url("./img/solution_icon_personal.png");
+}
+
+#im4:hover{
+  background-image: url("./img/solution_icon_personal_hover.png");
+}
+
+/*********/
+
+#im5{
+  background-image: url("./img/solution_icon_biz-transform.png");
+}
+
+#im5:hover{
+  background-image: url("./img/solution_icon_biz-transform_hover.png");
+}
+
+/*********/
+
+#im6{
+  background-image: url("./img/solution_icon_diti-cx.png");
+}
+
+#im6:hover{
+  background-image: url("./img/solution_icon_diti-cx_hover.png");
+}
+
+
+/******************************happening definitions********************************/
 #happening{
   background-image: url(./img/news-and-events-bg.jpg);
   background-position: top center;
@@ -273,6 +408,10 @@ h3{
 #happening .square{
 	height: 220px;
 
+}
+
+.happeningMenu{
+  top: 20%;
 }
 
 .hideHeader{
@@ -321,80 +460,40 @@ h3{
   height: 33px;
 }
 
-
-
-/*********************slides**********************/
-/*
-#slideMachine{
-	background-image: url(./img/slide-bg-complexity.jpg);
-	background-position: center top;
-	background-size: 100% auto;
-	padding: 0;
-	height: 0;
-	padding-bottom: 25%;
-	
-}
-*/
-#slideMachine{
-	position: relative;
-}
-
-#slideMachine h1{
-  text-align: left;
-  text-transform: capitalize;
-  font-size: 2em;
-}
-
-#slideMachine .square{
-  height: 150px;
-  font-size: 1.2em;
-}
-
-.slide{
+.icon{
+  border: none;
+  width: auto;
+  height: 22px;
+  float: left;
+  padding-left: 30px;
+  vertical-align: middle;
   color: white;
 }
 
-.slides span{
-  font-weight: bolder;
+.icon:hover{
+  color: black;
+  text-decoration: none;
 }
 
-.slideMachine{
-  padding-bottom: 15px;
-  position: absolute;
-	width: auto;
-	display: block;
-	bottom: 0;
+.eventsIcon{
+  background: url("./img/eventListIconEvents.png") no-repeat scroll left center;
 }
 
-
-.slides {
-  margin: 0;
-  padding: 0;
-}
-.slides li {
-  //font-size: 100px;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: none;
+.eventsIcon:hover{
+  background: url("./img/eventListIconEvents_hover.png") no-repeat scroll left center;
 }
 
-.slides{
-	height: auto;
+.newsIcon{
+  background: url("./img/eventListIconNews.png") no-repeat scroll left center;
 }
 
-.slides .current{
-	background-image: url(./img/slide-bg-complexity.jpg);             
-  background-repeat:   no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-	display: inline-block;
-	height: 550px;
+.newsIcon:hover{
+  background: url("./img/eventListIconNews_hover.png") no-repeat scroll left center;
 }
 
 
-/********************successStories***********/
+
+/******************************success stories definitions********************************/
 
 #successStories{
   background-color:#ECECEC;
@@ -408,7 +507,6 @@ h3{
     width: 345px;
     height: 323px;
     float: left;
-
 }
 
 #successStories .ulSmall{
@@ -534,7 +632,7 @@ h3{
   overflow: hidden;
 }
 
-/************************footer definitions********/
+/******************************footer definitions********************************/
 
 footer{
   background-image: url(./img/footerPattern.png);
@@ -624,125 +722,6 @@ footer
 }
 
 
-/****************************************/
-
-#im1{
-  background-image: url("./img/solution_icon_smart-money.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-  width: 150px;
-  height: 150px;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-#im1:hover{
-  background-image: url("./img/solution_icon_smart-money_hover.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-/*********/
-
-#im2{
-  background-image: url("./img/solution_icon_biz-analitics.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-  width: 150px;
-  height: 150px;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-#im2:hover{
-  background-image: url("./img/solution_icon_biz-analitics_hover.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-/*********/
-
-#im3{
-  background-image: url("./img/solution_icon_optimize-efficnt.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-  width: 150px;
-  height: 150px;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-#im3:hover{
-  background-image: url("./img/solution_icon_optimize-efficnt_hover.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-/*********/
-
-#im4{
-  background-image: url("./img/solution_icon_personal.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-  width: 150px;
-  height: 150px;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-#im4:hover{
-  background-image: url("./img/solution_icon_personal_hover.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-/*********/
-
-#im5{
-  background-image: url("./img/solution_icon_biz-transform.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-  width: 150px;
-  height: 150px;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-#im5:hover{
-  background-image: url("./img/solution_icon_biz-transform_hover.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-/*********/
-
-#im6{
-  background-image: url("./img/solution_icon_diti-cx.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-  width: 150px;
-  height: 150px;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
-
-#im6:hover{
-  background-image: url("./img/solution_icon_diti-cx_hover.png");
-  background-repeat:   no-repeat;
-  background-position: center center;
-
-  transition: -webkit-filter, background-image 150ms linear;
-}
 
 
 
