@@ -1,8 +1,8 @@
 /*Whole page definitions*/
 
 body{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 90%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 65%;
   background-color: white;
   margin:0;
   padding:0;
@@ -45,12 +45,12 @@ h3{
 }
 
 .day{
-	font-size: 400%;
+	font-size: 350%;
 	text-align: center;
 }
 
 .month{
-	font-size: 200%;
+	font-size: 150%;
 	text-align: center;
 }
 
@@ -61,6 +61,7 @@ h3{
   overflow: hidden;
   background-color: white;
   z-index: 10;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .navbar li{
@@ -287,6 +288,12 @@ h3{
 	float: left;
 	padding: 10px;
 	border-radius: 3px;
+  transition: -webkit-filter, background-color 150ms linear;
+}
+
+#happening .inner:hover{
+  background-color: rgba(220,220,220,1);
+  transition: -webkit-filter, background-color 150ms linear;
 }
 
 
@@ -332,6 +339,25 @@ h3{
 	position: relative;
 }
 
+#slideMachine h1{
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+#slideMachine .square{
+  height: 150px;
+  font-size: 1.2em;
+}
+
+.slide{
+  color: white;
+}
+
+.slides span{
+  font-weight: bolder;
+}
+
 .slideMachine{
   padding-bottom: 15px;
   position: absolute;
@@ -358,13 +384,13 @@ h3{
 }
 
 .slides .current{
-	background-image: url(./img/slide-bg-complexity.jpg);
-	background-size: cover;                     
+	background-image: url(./img/slide-bg-complexity.jpg);             
   background-repeat:   no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  background-size: cover;
 	display: inline-block;
-	height: 450px;
+	height: 550px;
 }
 
 
