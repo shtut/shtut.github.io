@@ -2,7 +2,7 @@
 
 body{
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 65%;
+  font-size: 62.5%;
   background-color: white;
   margin:0;
   padding:0;
@@ -37,7 +37,7 @@ h1{
   font-size: 4em;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 h4{
@@ -48,8 +48,8 @@ h3{
   font-size: 2em;
 }
 
-span{
-  font-weight: bolder;
+.bold{
+  font-weight: bold;
 }
 
 .container{
@@ -210,6 +210,7 @@ span{
 
 #slideMachine{
   position: relative;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 #slideMachine h1{
@@ -241,10 +242,6 @@ span{
 
 .slide{
   color: white;
-}
-
-.slides span{
-  font-weight: bolder;
 }
 
 .slideMachine{
@@ -552,7 +549,7 @@ span{
   transition: -webkit-filter, opacity 150ms linear;
 }
 
-.sub img:hover{
+.sub:hover img{
   -webkit-filter: none;
   filter: none;
   opacity: 1;
@@ -590,16 +587,16 @@ span{
   filter: grayscale(1);
   opacity: 0.5;
   
-  transition: -webkit-filter, opacity 150ms linear;
+  //transition: -webkit-filter, opacity 150ms linear;
 
 }
 
-.companyLogo:hover{
+/*.companyLogo:hover{
   -webkit-filter: none;
   filter: none;
   opacity: 1;
   transition: -webkit-filter, opacity 150ms linear;
-}
+}*/
 
 .pinfo{
   float: left;
@@ -631,6 +628,38 @@ span{
   width: 100%;
   overflow: hidden;
 }
+
+li .hidden{
+  background-color: #3AA6DB;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 335px;
+  height: 0px;
+  padding: 0;
+  margin-top: 190px;
+  transition: all 0.5s ease;
+}
+
+.ulSmall .hidden{
+  width: 220px;
+}
+
+li .front{
+
+}
+
+li .hidden p{
+  padding: 20px;
+}
+
+.main:hover .hidden{
+  height: 190px;
+  transform: translateY(-190px);
+  transition: all 0.5s ease;
+}
+
 
 /******************************footer definitions********************************/
 
