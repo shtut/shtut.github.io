@@ -8,6 +8,10 @@ body{
   padding:0;
 }
 
+::selection {
+  background: #0DD; /* WebKit/Blink Browsers */
+}
+
 ul{
   -webkit-padding-start: 0px;
 }
@@ -41,7 +45,10 @@ h1{
 }
 
 h4{
-  font-size: 1.3em;
+  font-size: 1.7em;
+}
+p{
+  font-size: 1.5em;
 }
 
 h3{
@@ -90,7 +97,7 @@ h3{
 
 .squareContainer{
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   width: inherit;
   margin-left: auto;
   margin-right: auto;
@@ -109,7 +116,7 @@ h3{
   position: absolute;
   bottom:0;
   padding-top: inherit;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 
@@ -287,6 +294,10 @@ h3{
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
 }
 
+#whatCan p{
+  font-size: 1.5em;
+}
+
 #whatCan a:hover{
   text-decoration: none;
 }
@@ -403,7 +414,7 @@ h3{
 }
 
 #happening .square{
-	height: 220px;
+	height: 230px;
 
 }
 
@@ -412,7 +423,7 @@ h3{
 }
 
 .hideHeader{
-	color: transparent;
+	opacity: 0;
 }
 
 #happening .square h3{
@@ -496,6 +507,11 @@ h3{
   background-color:#ECECEC;
   height:512px;
   box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15) inset;
+  color: rgb(108,108,108);
+}
+
+#successStories h1{
+  color: rgb(108,108,108);
 }
 
 #successStories ul{
