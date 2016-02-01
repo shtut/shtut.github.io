@@ -9,7 +9,7 @@ body{
 }
 
 ::selection {
-  background: #0DD; /* WebKit/Blink Browsers */
+  background: #EB3FBD; /* WebKit/Blink Browsers */
 }
 
 ul{
@@ -68,13 +68,13 @@ h3{
 }
 
 .day{
-	font-size: 350%;
-	text-align: center;
+  font-size: 350%;
+  text-align: center;
 }
 
 .month{
-	font-size: 150%;
-	text-align: center;
+  font-size: 150%;
+  text-align: center;
 }
 
 
@@ -129,23 +129,29 @@ h3{
 /******************************top definitions********************************/
 
 #top{
-  overflow: hidden;
   background-color: white;
   z-index: 10;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100px;
 }
 
 .navbar li{
-  display: inline;
   text-transform: uppercase;
   width: auto;
   vertical-align: text-bottom;
   padding: 3px;
+  display: inline-block;
 }
 
 .divider{
   background: url("./img/divider.png") center center no-repeat;
   height: 150%;
+}
+
+.dividerBig{
+  background: url("./img/line_divider_video.png") center center no-repeat;
+  float: left;
+  margin-left: 25%;
 }
 
 .nav, .logo{
@@ -167,6 +173,40 @@ h3{
   padding-top: 10px;
 }
 
+ul li ul.dropdown{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.15);
+    }
+
+ul li:hover ul.dropdown{
+        display: block; 
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+  
+  .dropdownImage{
+    float: right;
+    background: url("./img/line_divider_video.png")  no-repeat scroll left 0px;
+    padding-left: 50px;
+  }
+  
+  .dropdownList{
+    float: left;
+    padding-right: 20%;
+  }
+  
+  .dropdownList a{
+    display: block;
+  }
+
 .rightMenu{
   width: 180px;
   padding-top: 10px;
@@ -180,12 +220,12 @@ h3{
   display: inline;
 }
 .loginMenu{
-	padding-top: 5px;
+  padding-top: 5px;
   border: none;
 
 }
 .searchBar{
-	margin-top: 40px;
+  margin-top: 40px;
   border: 1px solid hsl(0, 0%, 82%);
   border-radius: 5px;
 }
@@ -414,7 +454,7 @@ h3{
 }
 
 #happening .square{
-	height: 230px;
+  height: 230px;
 
 }
 
@@ -423,18 +463,18 @@ h3{
 }
 
 .hideHeader{
-	opacity: 0;
+  opacity: 0;
 }
 
 #happening .square h3{
-	text-align: left;
+  text-align: left;
 }
 
 #happening .inner{
-	background-color: rgba(220,220,220,0.5);
-	float: left;
-	padding: 10px;
-	border-radius: 3px;
+  background-color: rgba(220,220,220,0.5);
+  float: left;
+  padding: 10px;
+  border-radius: 3px;
   transition: -webkit-filter, background-color 150ms linear;
 }
 
@@ -445,15 +485,15 @@ h3{
 
 
 #happening .date{
-	background-color: #3399cc;
-	color: white;
-	float: left;
-	margin-right: 10px;
-	border-radius: 2px;
-	height: 100px;
-	width: 66px;
-	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.50) inset;
-	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.30);
+  background-color: #3399cc;
+  color: white;
+  float: left;
+  margin-right: 10px;
+  border-radius: 2px;
+  height: 100px;
+  width: 66px;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.50) inset;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.30);
 }
 
 #happening .day{
@@ -573,15 +613,14 @@ h3{
 }
 
 .main div{
-	float: left;
-	//overflow: hidden;
-	background-color: white;
+  float: left;
+  //overflow: hidden;
+  background-color: white;
 }
 
 .mainDiv{
   height: 170px;
   padding: 10px;
-
 }
 
 .name{
@@ -733,17 +772,17 @@ footer .square{
 }
 
 .footerLeftMenu{
-	float: left;
-	width: 700px;
+  float: left;
+  width: 700px;
 }
 
 .footerLeftMenu li{
-	display: inline;
-	float: left;
+  display: inline;
+  float: left;
 }
 
 .FooterCenter a{
-	display: block;
+  display: block;
   padding: 5px;
 }
 
@@ -753,9 +792,9 @@ footer .square{
 }
 
 .socialMediaLinks{
-	position: absolute;
-	bottom: 0;
-	padding-bottom: 35px;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 35px;
 }
 
 .footerLeftMenu h3{
@@ -764,27 +803,41 @@ footer .square{
 }
 
 footer .date, .blogPost{
-	float: left;
+  float: left;
 }
 
 footer .date{
-	padding-right: 10px;
+  padding-right: 10px;
 }
 
 footer 
 
 .blogPost{
-	border-bottom-width: 1px;
-	border-bottom-style: dotted;
-	border-bottom-color: hsl(0, 100%, 100%);
-	padding: 10px;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: hsl(0, 100%, 100%);
+  padding: 10px;
 }
 
 .subscribe{
-	padding: 10px;
+  padding: 10px;
 }
 
-
-
-
-
+.youtube{
+  background: url("./img/socialMenuIcon-youtube.png") no-repeat;
+}
+.youtube:hover{
+  background: url("./img/socialMenuIcon-youtube_hover.png") no-repeat;
+}
+.twitter{
+  background: url("./img/socialMenuIcon-twitter.png") no-repeat;
+}
+.twitter:hover{
+  background: url("./img/socialMenuIcon-twitter_hover.png") no-repeat;
+}
+.linkedIn{
+  background: url("./img/socialMenuIcon-linkdin.png") no-repeat;
+}
+.linkedIn:hover{
+  background: url("./img/socialMenuIcon-linkdin_hover.png") no-repeat;
+}
