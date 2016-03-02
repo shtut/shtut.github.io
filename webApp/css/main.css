@@ -1,0 +1,25 @@
+body{
+background-color: grey;
+background-image: url("../img/body-background.jpg");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: fixed;
+margin: 0;
+}
+
+header{
+background: black;
+}
+
+header .search-box{
+float: right;
+padding: 5px;
+}
+
+.layout-wrap{
+width: 940px;
+margin: 0 auto;
+background-color: rgba(0,0,0,0.3);
+padding: 10px;
+}
+
