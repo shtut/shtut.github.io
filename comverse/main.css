@@ -6,6 +6,7 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+
 }
 
 ::selection {
@@ -56,12 +57,9 @@ h4 {
   font-size: 1.7em;
 }
 
-p {
-  font-size: 1.5em;
-}
-
 h3 {
   font-size: 2em;
+  text-transform: uppercase;
 }
 
 .bold {
@@ -129,6 +127,10 @@ h3 {
   padding-top: 30px;
 }
 
+.square .bottomText:hover{
+text-decoration: underline;
+}
+
 .square .bottomText img {
   vertical-align: middle;
   padding-right: 10px;
@@ -142,6 +144,7 @@ h3 {
   z-index: 10;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100px;
+  font-size: 1.3em;
 }
 
 .navbar li {
@@ -150,6 +153,7 @@ h3 {
   vertical-align: text-bottom;
   padding: 3px;
   display: inline-block;
+  
 }
 
 .navbarLi:hover {}
@@ -289,14 +293,34 @@ ul li ul.dropdown li {
   text-transform: capitalize;
 }
 
+.slidesBtn{
+  background: linear-gradient(to bottom, rgb(55, 157, 210) 0%, rgb(17, 136, 200) 100%);
+  width: 180px;
+  float: left;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.slidesBtn:hover{
+  background: #2F9DD3;
+}
+
 #slideMachine .square {
   height: 150px;
-  font-size: 1.2em;
   border-radius: 6px;
   box-shadow: 0 1px 3px 0 gray;
   color: white;
   text-transform: capitalize;
   height: 130px;
+}
+
+.squareText{
+  margin: 0;
+  font-size: 2em;
+}
+
+.bottomText p{
+font-size: 1.5em;
 }
 
 #pink {
@@ -311,10 +335,6 @@ ul li ul.dropdown li {
   background-color: #ff7518;
 }
 
-.slide {
-  color: white;
-}
-
 .slideMachine {
   padding-bottom: 15px;
   position: absolute;
@@ -326,18 +346,23 @@ ul li ul.dropdown li {
 .slides {
   margin: 0;
   padding: 0;
+  height: auto;
 }
 
-.slides li {
-  //font-size: 100px;
+.slides .slide {
   margin: 0;
   padding: 0;
   width: 100%;
   display: none;
+  color: white;
 }
 
-.slides {
-  height: auto;
+.slideHeader{
+  padding-top: 30px;
+}
+
+.subHeader{
+  font-size: 1.4em;
 }
 
 .slides .current {
@@ -348,6 +373,32 @@ ul li ul.dropdown li {
   background-size: cover;
   display: inline-block;
   height: 550px;
+}
+
+.bullets{
+  height: 10px;
+  padding-top: 10px;
+  float: left;
+  display: block;
+}
+
+.bulletPoint{
+  width: 10px;
+  height: 10px;
+  background-color: #e5e5e5;
+  float: left;
+  display: inline-block;
+  margin-left: 10px;
+  border-radius: 3px;
+  box-shadow:  0 1px 3px 0 gray;
+}
+
+.bulletPoint:hover{
+  background-color: white;
+}
+
+.bullets .currentBlt{
+  background-color: #2e95ca;
 }
 
 
@@ -406,15 +457,38 @@ ul li ul.dropdown li {
 }
 
 .button{
-  background: url(../img/btnArrow.png) right 15px center no-repeat, linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(16,45,114,0.99) 99%,rgba(16,45,114,1) 100%);;
-  height: 35px;
-  margin: auto;
-  width: 180px;
+  margin: 0 auto;
+  display: block;
   padding: 10px;
   border: none;
-  text-align: left;
   border-radius: 6px;
   color: white;
+}
+
+.button:hover{
+  text-decoration: none;
+}
+
+.seeAllSolutionsBtn{
+  background: linear-gradient(to bottom, rgba(63,123,147,0.5) 0%,rgba(0,78,105,0.5) 100%);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 180px;
+  margin-left: -90px; 
+  text-align: center;
+}
+
+.seeAllSolutionsBtn:hover{
+  background: #2F9DD3;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.20);
+}
+
+.btnText{
+  background: url("./img/btnArrow.png") no-repeat right center;
+  display: block;
+  height: 100%;
+  font-size: 1.3em;
 }
 
 
@@ -601,6 +675,7 @@ ul li ul.dropdown li {
   height: 512px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
   color: rgb(108, 108, 108);
+  padding-bottom: 0;
 }
 
 #successStories h1 {
@@ -783,6 +858,17 @@ li .hidden p {
   transition: all 0.5s ease;
 }
 
+.toTopbtn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.backTop{
+  display: block;
+}
+
 
 /******************************footer definitions********************************/
 
@@ -797,6 +883,10 @@ footer {
 
 footer .square {
   padding: 0;
+}
+
+.footerLink a{
+  font-size: 1.2em;
 }
 
 .copyright {
@@ -832,11 +922,12 @@ footer .square {
 
 .FooterCenter a {
   display: block;
-  padding: 5px;
+  padding: 2px;
 }
 
 .footerRightMenu h3 {
   color: #4ea7d3;
+  text-align: center;
 }
 
 .socialMediaLinks {
