@@ -58,7 +58,7 @@ h4 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.8em;
   text-transform: uppercase;
 }
 
@@ -94,6 +94,10 @@ h3 {
   float: left;
   padding: 15px 10px 10px 15px;
   transition: -webkit-filter, opacity 150ms linear;
+}
+
+.inner{
+  font-size: 1.4em;
 }
 
 .square:hover {
@@ -136,6 +140,37 @@ text-decoration: underline;
   padding-right: 10px;
 }
 
+.button{
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.button:hover{
+  text-decoration: none;
+}
+
+.blueBtn{
+  background: linear-gradient(to bottom, rgb(55, 157, 210) 0%, rgb(17, 136, 200) 100%);
+  width: 180px;
+  
+  text-transform: uppercase;
+  text-align: left;
+}
+.blueBtn:hover{
+  background: #2F9DD3;
+}
+
+.btnText{
+  background: url("./img/btnArrow.png") no-repeat right center;
+  display: block;
+  height: 100%;
+  font-size: 1.3em;
+}
+
 
 /******************************top definitions********************************/
 
@@ -172,7 +207,6 @@ text-decoration: underline;
 
 .nav,
 .logo {
-  //width: auto;
   display: block;
   left: 0;
   height: 17px;
@@ -234,6 +268,7 @@ ul li ul.dropdown li {
   display: block;
   vertical-align: baseline;
   float: right;
+  font-size: 0.9em;
 }
 
 .loginMenu,
@@ -242,6 +277,11 @@ ul li ul.dropdown li {
   display: inline;
 }
 
+.languageMenu{
+  float: left;
+  width: 45px;
+  border: none;
+}
 .loginMenu {
   padding-top: 5px;
   border: none;
@@ -294,15 +334,7 @@ ul li ul.dropdown li {
 }
 
 .slidesBtn{
-  background: linear-gradient(to bottom, rgb(55, 157, 210) 0%, rgb(17, 136, 200) 100%);
-  width: 180px;
   float: left;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.slidesBtn:hover{
-  background: #2F9DD3;
 }
 
 #slideMachine .square {
@@ -456,19 +488,6 @@ font-size: 1.5em;
   margin-top: 150px;
 }
 
-.button{
-  margin: 0 auto;
-  display: block;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  color: white;
-}
-
-.button:hover{
-  text-decoration: none;
-}
-
 .seeAllSolutionsBtn{
   background: linear-gradient(to bottom, rgba(63,123,147,0.5) 0%,rgba(0,78,105,0.5) 100%);
   position: absolute;
@@ -482,13 +501,6 @@ font-size: 1.5em;
 .seeAllSolutionsBtn:hover{
   background: #2F9DD3;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.20);
-}
-
-.btnText{
-  background: url("./img/btnArrow.png") no-repeat right center;
-  display: block;
-  height: 100%;
-  font-size: 1.3em;
 }
 
 
@@ -628,7 +640,7 @@ font-size: 1.5em;
 }
 
 .inner .day {
-  height: 66px;
+  height: auto;
   line-height: 66px;
 }
 
@@ -692,7 +704,6 @@ font-size: 1.5em;
 
 #successStories .ulSmall {
   width: 230px;
-  //overflow: hidden;
 }
 
 #successStories li {
@@ -702,6 +713,10 @@ font-size: 1.5em;
 
 #successStories li a {
   display: block;
+}
+
+#successStories p{
+  font-size: 1.4em;
 }
 
 .sub div {
@@ -738,7 +753,6 @@ font-size: 1.5em;
 
 .main div {
   float: left;
-  //overflow: hidden;
   background-color: white;
 }
 
@@ -762,20 +776,13 @@ font-size: 1.5em;
 .companyLogo {
   float: right;
   height: auto;
+  display: inline-block;
   width: 70px;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   opacity: 0.5;
-  //transition: -webkit-filter, opacity 150ms linear;
+  transition: opacity 3s ease;
 }
-
-
-/*.companyLogo:hover{
-  -webkit-filter: none;
-  filter: none;
-  opacity: 1;
-  transition: -webkit-filter, opacity 150ms linear;
-}*/
 
 .pinfo {
   float: left;
@@ -808,55 +815,57 @@ font-size: 1.5em;
   overflow: hidden;
 }
 
-
-/*li .hidden{
+/*animation for the main divs (bigger squares)*/
+li .hidden{
   background-color: #3AA6DB;
   color: white;
   overflow: hidden;
-  margin-top: -190px;
-  padding: 10px;
-  opacity: 0;
-  //transition: all 0.5s ease;
-}
-
-.main:hover .front{
   max-height: 0px;
-  transition: all 0.5s ease;
-}
-
-.main:hover .hidden{
-  opacity: 1;
-  transition: all 0.5s ease;
-}*/
-
-li .hidden {
-  background-color: #3AA6DB;
-  color: white;
-  overflow: hidden;
   height: 190px;
-  padding: 0;
   margin-top: -190px;
-  transition: all 0.5s ease;
+  padding: 0;
+  transition: max-height 1s ease;
 }
 
-
-/*.ulSmall .hidden{
-  width: 220px;
-}
-
-li .front{
-
-}*/
-
-li .hidden p {
+.hidden p {
   padding: 20px;
 }
 
 .main:hover .hidden {
-  height: 0px;
-  //transform: translateY(-190px);
+  max-height: 300px;
+  margin-top: -190px;
+  transition: max-height 1s ease;
+}
+
+.main:hover .companyLogo{
+  opacity: 0;
   transition: all 0.5s ease;
 }
+
+/*animation for the sub divs (smaller squares)*/
+.subHidden{
+  max-height: 0px;
+  height: 95px;
+  margin-top: -95px;
+  transition: max-height 1s ease;
+}
+
+.sub:hover .subHidden{
+  max-height: 200px;
+  margin-top: -95px;
+  transition: max-height 1s ease;
+}
+
+.successBtn{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+}
+
+/*back to top button*/
 
 .toTopbtn{
   position: absolute;
@@ -865,10 +874,9 @@ li .hidden p {
   display: block;
 }
 
-.backTop{
+.backTopImg{
   display: block;
 }
-
 
 /******************************footer definitions********************************/
 
@@ -886,7 +894,7 @@ footer .square {
 }
 
 .footerLink a{
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .copyright {
@@ -928,17 +936,13 @@ footer .square {
 .footerRightMenu h3 {
   color: #4ea7d3;
   text-align: center;
+  margin: 10px 0 10px 0;
 }
 
 .socialMediaLinks {
   position: absolute;
   bottom: 0;
   padding-bottom: 35px;
-}
-
-.footerLeftMenu h3 {
-  //font-size: 1.6em;
-  text-align: left;
 }
 
 .blogPost {
@@ -954,6 +958,7 @@ footer .blogPost {
 
 .subscribe {
   padding: 10px;
+  float: left;
 }
 
 .subscribeForm {
@@ -969,7 +974,6 @@ footer .blogPost {
   margin: 0;
   padding: 0 0 0 5px;
   border: none;
-  //border-radius: 2px;
   background: white;
   text-align: center;
 }
@@ -980,7 +984,6 @@ footer .blogPost {
   color: white;
   border: none;
   border-radius: 2px;
-  //cursor: pointer;
   height: 26px;
   width: 30%;
   float: right;
