@@ -6,7 +6,6 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
-
 }
 
 ::selection {
@@ -92,7 +91,7 @@ h2 {
   transition: -webkit-filter, opacity 150ms linear;
 }
 
-.inner{
+.inner {
   font-size: 1.4em;
 }
 
@@ -127,8 +126,8 @@ h2 {
   padding-top: 30px;
 }
 
-.square .bottomText:hover{
-text-decoration: underline;
+.square .bottomText:hover {
+  text-decoration: underline;
 }
 
 .square .bottomText img {
@@ -136,7 +135,7 @@ text-decoration: underline;
   padding-right: 10px;
 }
 
-.button{
+.button {
   margin: 0 auto;
   display: block;
   padding: 10px;
@@ -145,35 +144,36 @@ text-decoration: underline;
   color: white;
 }
 
-.button:hover{
+.button:hover {
   text-decoration: none;
 }
 
-.blueBtn{
+.blueBtn {
   background: linear-gradient(to bottom, rgb(55, 157, 210) 0%, rgb(17, 136, 200) 100%);
   width: 180px;
-  
   text-transform: uppercase;
   text-align: left;
 }
-.blueBtn:hover{
+
+.blueBtn:hover {
   background: #2F9DD3;
 }
 
-.btnText{
+.btnText {
   background: url("./img/btnArrow.png") no-repeat right center;
   display: block;
   height: 100%;
   font-size: 1.3em;
 }
 
-.transparent{
-	color: transparent;
+.transparent {
+  color: transparent;
 }
 
-.transparent:hover{
-	color: transparent;
+.transparent:hover {
+  color: transparent;
 }
+
 
 /******************************top definitions********************************/
 
@@ -191,7 +191,6 @@ text-decoration: underline;
   vertical-align: text-bottom;
   padding: 3px;
   display: inline-block;
-  
 }
 
 .navbarLi:hover {}
@@ -280,11 +279,12 @@ ul li ul.dropdown li {
   display: inline;
 }
 
-.languageMenu{
+.languageMenu {
   float: left;
   width: 45px;
   border: none;
 }
+
 .loginMenu {
   padding-top: 5px;
   border: none;
@@ -311,7 +311,7 @@ ul li ul.dropdown li {
   padding: 2px 5px;
 }
 
-#search{
+#search {
   text-align: center;
 }
 
@@ -336,7 +336,7 @@ ul li ul.dropdown li {
   text-transform: capitalize;
 }
 
-.slidesBtn{
+.slidesBtn {
   float: left;
 }
 
@@ -349,13 +349,13 @@ ul li ul.dropdown li {
   height: 130px;
 }
 
-.squareText{
+.squareText {
   margin: 0;
   font-size: 2em;
 }
 
-.bottomText p{
-font-size: 1.5em;
+.bottomText p {
+  font-size: 1.5em;
 }
 
 #pink {
@@ -392,11 +392,11 @@ font-size: 1.5em;
   color: white;
 }
 
-.slideHeader{
+.slideHeader {
   padding-top: 30px;
 }
 
-.subHeader{
+.subHeader {
   font-size: 1.4em;
 }
 
@@ -410,14 +410,14 @@ font-size: 1.5em;
   height: 550px;
 }
 
-.bullets{
+.bullets {
   height: 10px;
   padding-top: 10px;
   float: left;
   display: block;
 }
 
-.bulletPoint{
+.bulletPoint {
   width: 10px;
   height: 10px;
   background-color: #e5e5e5;
@@ -425,15 +425,15 @@ font-size: 1.5em;
   display: inline-block;
   margin-left: 10px;
   border-radius: 3px;
-  box-shadow:  0 1px 3px 0 gray;
+  box-shadow: 0 1px 3px 0 gray;
   color: transparent;
 }
 
-.bulletPoint:hover{
+.bulletPoint:hover {
   background-color: white;
 }
 
-.bullets .currentBlt{
+.bullets .currentBlt {
   background-color: #2e95ca;
 }
 
@@ -492,17 +492,17 @@ font-size: 1.5em;
   margin-top: 150px;
 }
 
-.seeAllSolutionsBtn{
-  background: linear-gradient(to bottom, rgba(63,123,147,0.5) 0%,rgba(0,78,105,0.5) 100%);
+.seeAllSolutionsBtn {
+  background: linear-gradient(to bottom, rgba(63, 123, 147, 0.5) 0%, rgba(0, 78, 105, 0.5) 100%);
   position: absolute;
   bottom: 30px;
   left: 50%;
   width: 180px;
-  margin-left: -90px; 
+  margin-left: -90px;
   text-align: center;
 }
 
-.seeAllSolutionsBtn:hover{
+.seeAllSolutionsBtn:hover {
   background: #2F9DD3;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.20);
 }
@@ -719,7 +719,7 @@ font-size: 1.5em;
   display: block;
 }
 
-#successStories p{
+#successStories p {
   font-size: 1.4em;
 }
 
@@ -819,8 +819,10 @@ font-size: 1.5em;
   overflow: hidden;
 }
 
+
 /*animation for the main divs (bigger squares)*/
-li .hidden{
+
+li .hidden {
   background-color: #3AA6DB;
   color: white;
   overflow: hidden;
@@ -841,46 +843,50 @@ li .hidden{
   transition: max-height 1s ease;
 }
 
-.main:hover .companyLogo{
+.main:hover .companyLogo {
   opacity: 0;
   transition: all 0.5s ease;
 }
 
+
 /*animation for the sub divs (smaller squares)*/
-.subHidden{
+
+.subHidden {
   max-height: 0px;
   height: 95px;
   margin-top: -95px;
   transition: max-height 1s ease;
 }
 
-.sub:hover .subHidden{
+.sub:hover .subHidden {
   max-height: 200px;
   margin-top: -95px;
   transition: max-height 1s ease;
 }
 
-.successBtn{
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    width: 200px;
-    margin-left: -100px;
-    text-align: center;
+.successBtn {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
 }
+
 
 /*back to top button*/
 
-.toTopbtn{
+.toTopbtn {
   position: absolute;
   bottom: 0;
   left: 0;
   display: block;
 }
 
-.backTopImg{
+.backTopImg {
   display: block;
 }
+
 
 /******************************footer definitions********************************/
 
@@ -897,7 +903,7 @@ footer .square {
   padding: 0;
 }
 
-.footerLink a{
+.footerLink a {
   font-size: 1.3em;
 }
 
@@ -983,8 +989,7 @@ footer .blogPost {
 }
 
 .subscribeButton {
-  background: linear-gradient(to bottom, rgb(89, 190, 219) 0%, rgb(51, 153, 204) 100%);
-  //background: linear-gradient(to bottom, #3AA6DB , #2a92c6);
+  background: linear-gradient(to bottom, #3AA6DB, #2a92c6);
   color: white;
   border: none;
   border-radius: 2px;
