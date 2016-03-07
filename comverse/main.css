@@ -167,6 +167,13 @@ text-decoration: underline;
   font-size: 1.3em;
 }
 
+.transparent{
+	color: transparent;
+}
+
+.transparent:hover{
+	color: transparent;
+}
 
 /******************************top definitions********************************/
 
@@ -419,6 +426,7 @@ font-size: 1.5em;
   margin-left: 10px;
   border-radius: 3px;
   box-shadow:  0 1px 3px 0 gray;
+  color: transparent;
 }
 
 .bulletPoint:hover{
@@ -985,26 +993,14 @@ footer .blogPost {
   float: right;
 }
 
-.youtube {
-  background: url("./img/socialMenuIcon-youtube.png") no-repeat;
+#youtube:hover {
+  content: url("./img/socialMenuIcon-youtube_hover.png");
 }
 
-.youtube:hover {
-  background: url("./img/socialMenuIcon-youtube_hover.png") no-repeat;
+#twitter:hover {
+  content: url("./img/socialMenuIcon-twitter_hover.png");
 }
 
-.twitter {
-  background: url("./img/socialMenuIcon-twitter.png") no-repeat;
-}
-
-.twitter:hover {
-  background: url("./img/socialMenuIcon-twitter_hover.png") no-repeat;
-}
-
-.linkedIn {
-  background: url("./img/socialMenuIcon-linkdin.png") no-repeat;
-}
-
-.linkedIn:hover {
-  background: url("./img/socialMenuIcon-linkdin_hover.png") no-repeat;
+#linkedIn:hover {
+  content: url("./img/socialMenuIcon-linkdin_hover.png");
 }
