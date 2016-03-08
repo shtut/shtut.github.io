@@ -56,7 +56,7 @@ padding: 5px;
 	text-align: center;
 }
 
-.rightmost{
+.nav-section:last-child{
 	margin-right:0;
 }
 
@@ -75,6 +75,10 @@ padding: 5px;
 }
 #rightIm{
 	background-image: url("../img/icons/actions-help.png");
+}
+
+.action-list{
+	background: white;
 }
 
 
