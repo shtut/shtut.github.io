@@ -1,0 +1,117 @@
+/*General whole-page definitions*/
+html{
+	height: 100%;
+}
+
+body{
+background-color: gray;
+background: url("../img/body-background.jpg") no-repeat center center fixed; ;
+background-size: cover;
+margin: 0;
+height: 100%;
+position: relative;
+}
+
+.layout-wrap{
+width: 940px;
+margin: 0 auto;
+background-color: rgba(0,0,0,0.3);
+padding: 10px;
+height: calc(100% - 72px);
+}
+
+/*Header definitions*/
+header{
+background: black;
+}
+
+header .search-box{
+float: right;
+padding: 5px;
+}
+
+/*Notifications area definitions*/
+.notifications{
+	background-color: lightgray;
+	padding: 10px;
+}
+
+/*Menu area definitions*/
+
+.nav-section > div{
+	padding: 1em 1em 0;
+	text-align: left;
+}
+
+.nav-section{
+    overflow: hidden;
+}
+.nav-section{
+    width: 30%;
+    float: left;
+    background-color: black;
+	color: white;
+	margin-right: 5%;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.nav-section:last-child{
+	margin-right:0;
+}
+
+.cropped-image{
+	width: 130px;
+	height: 60px;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+#leftIm{
+	background-image: url("../img/icons/action-report-new.png");
+}
+#centerIm{
+	background-image: url("../img/icons/action-report-top.png");
+}
+#rightIm{
+	background-image: url("../img/icons/actions-help.png");
+}
+
+.action-list{
+	background: white;
+}
+
+
+/*Tabs area definitions*/
+
+.tabs{
+	background-color: lightgrey;
+}
+
+.active{
+	color: orange;
+}
+
+.tab-content{
+	background-color: gray;
+	width: 100%;
+	height: 100px;
+}
+
+#quick-reports{
+	background-color: red;
+}
+
+#my-folders{
+	background-color: blue;
+}
+
+#my-team-folders{
+	background-color: white;
+}
+
+#public-folders{
+	background-color: purple;
+}
+
+
