@@ -91,8 +91,8 @@ h2 {
   transition: -webkit-filter, opacity 150ms linear;
 }
 
-.rightmost{
-	margin-right: 0;
+.rightmost {
+  margin-right: 0;
 }
 
 .inner {
@@ -178,6 +178,7 @@ h2 {
   color: transparent;
 }
 
+
 /******************************Header (top) definitions********************************/
 
 #top {
@@ -196,6 +197,9 @@ h2 {
   display: inline-block;
 }
 
+.header-mobile {
+  display: none;
+}
 
 .divider {
   background: url("./img/divider.png") center center no-repeat;
@@ -898,6 +902,10 @@ footer {
   position: relative;
   height: 400px;
   clear: both;
+}
+
+.footer-mobile {
+  display: none;
 }
 
 footer .square {

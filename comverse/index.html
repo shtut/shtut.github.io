@@ -13,6 +13,8 @@
 <body>
 
   <header id="top">
+
+    <!--desktop header-->
     <div class="container">
       <a href="#" name="top" class="logo">
         <img alt="Comverse Logo" src="./img/comverse-logo.png">
@@ -131,6 +133,45 @@
         </div>
       </div>
     </div>
+    <!--mobile header-->
+    <div class="header-mobile contaier">
+      <label id="hamburger" class="button-m" for="menu-m"><img src="img/hamburger-icon.png" alt="options"></label>
+      <input type="checkbox" id="menu-m">
+
+
+      <a href="#" name="top">
+        <img id="logo-m" alt="Comverse Logo" src="./img/comverse-logo.png">
+      </a>
+
+      <label class="search-m button-m" for="search-m">
+        <img alt="magnifying glass" src="./img/searchBtnMobile.png">
+      </label>
+      <input type="checkbox" id="search-m">
+
+
+      <div class="searchBar-m">
+        <div class="inputText">
+          <input id="search" title="search text" type="text">
+          <input type="button" value=" " title="search button" class="submit" searchurl="search">
+        </div>
+
+      </div>
+
+      <ul class="mobile-menu-items">
+        <li class="item-m">
+          <a href="">Your Needs</a>
+        </li>
+        <li class="item-m">
+          <a href="">Our Portfolio</a>
+        </li>
+        <li class="item-m">
+          <a href="">News &amp; Media</a>
+        </li>
+        <li class="item-m">
+          <a href="">About Comverse</a>
+        </li>
+      </ul>
+    </div>
   </header>
 
 
@@ -139,10 +180,10 @@
     <ul class="slides active">
       <li class="slide current" name="slide1">
         <div class="container">
-        <div class="HeaderContainer">
-          <h1 class="slideHeader"><span class="bold">free</span> your markets from <br>IT <span class="bold">complexity</span></h1>
-          <p class="subHeader">comverse policy studio<br><span class="bold">1st</span> ever marketing-oriented policy tool</p>
-		</div>
+          <div class="HeaderContainer">
+            <h1 class="slideHeader"><span class="bold">free</span> your markets from <br>IT <span class="bold">complexity</span></h1>
+            <p class="subHeader">comverse policy studio<br><span class="bold">1st</span> ever marketing-oriented policy tool</p>
+          </div>
           <a href="" class="slidesBtn blueBtn button"><span class="btnText">Learn More</span></a>
 
           <br><br><br><br>
@@ -581,6 +622,7 @@
   </div>
 
   <footer>
+    <!---desktop footer -->
     <div class="container">
       <div class="footerLeftMenu">
         <div class="FooterCenter">
@@ -659,6 +701,35 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <!---mobile footer -->
+    <div class="footer-mobile contaier">
+      <div class="contact-m mFooterSection"><a href="">CONTACT US</a></div>
+      <div class="subscribe-m mFooterSection"><a href="">SUBSCRIBE TO COMVERSE NEWS</a></div>
+      <div class="visit-m mFooterSection">
+        VISIT US ON:
+        <div class="socialMedia">
+          <a href="#" title="youtube link">
+            <img src="img/socialMenuIcon-youtube.png" id="youtube" alt="youtube icon">
+          </a>
+          <a href="#" title="twitter link">
+            <img src="img/socialMenuIcon-twitter.png" id="twitter" alt="twitter icon">
+          </a>
+          <a href="#" title="linkedIn link">
+            <img src="img/socialMenuIcon-linkdin.png" id="linkedIn" alt="linkedIn icon">
+          </a>
+        </div>
+      </div>
+      <div class="language-m mFooterSection">
+        CHANGE LANGUAGE:
+        <select name="language" title="language menu" class="languageMenu-m">
+							    <option value="English" title="English">English</option>
+							    <option value="Not English" title="Not English">Not-English</option>
+							</select>
+
+      </div>
+      <div class="copyright-m">Copyright © 2012 Comverse.Inc | <a href="">Privacy Policy</a> | <a href="">Sitemap</a></div>
     </div>
   </footer>
 </body>
