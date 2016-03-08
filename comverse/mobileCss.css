@@ -1,0 +1,65 @@
+@media (max-width:940px){
+	#slideMachine, #whatCan, #happening, #successStories{
+		height: auto;
+	}
+
+	.container{
+		width: 100%;
+	}
+
+	.whatCanImage ,.square, .successList{
+		width: 100%;
+		margin: 5px 5px 5px 0;
+		display: block;
+	}
+
+	#successStories ul{
+		float: none;
+		margin: 0 auto;
+		left: 25%;
+	}
+
+	#successStories .container{
+		padding-bottom: 15%;
+	}
+
+	.squareContainer, .successList, .happeningMenu, .whatCanItems{
+		display: inline-block;
+		position: relative;
+	}
+
+	.inner{
+		width: 90%;
+	}
+
+
+	.HeaderContainer{
+		background-image: url(./img/weDoBG.png), radial-gradient(at 50% 50%, rgb(89, 190, 219) 0%, rgb(51, 153, 204) 100%);
+		padding-left: 10px;
+	}
+
+	.bullets{
+		position: absolute;
+		bottom: 30px;		
+	}
+
+	.bulletPoint{
+
+		width: 20px;
+		height: 20px;
+		color: black;
+		text-align: center;
+		line-height: 20px;
+		font-size: 1.2em;
+	}
+
+	.ulSmall{
+		display: none;
+	}
+
+	
+
+
+
+
+}

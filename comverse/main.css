@@ -85,10 +85,14 @@ h2 {
   opacity: 0.9;
   width: 28%;
   height: auto;
-  margin-right: 20px;
+  margin-right: 4%;
   float: left;
   padding: 15px 10px 10px 15px;
   transition: -webkit-filter, opacity 150ms linear;
+}
+
+.rightmost{
+	margin-right: 0;
 }
 
 .inner {
@@ -173,7 +177,6 @@ h2 {
 .transparent:hover {
   color: transparent;
 }
-
 
 /******************************Header (top) definitions********************************/
 
@@ -340,7 +343,6 @@ ul li ul.dropdown li {
 }
 
 #slideMachine .square {
-  height: 150px;
   border-radius: 6px;
   box-shadow: 0 1px 3px 0 gray;
   color: white;
