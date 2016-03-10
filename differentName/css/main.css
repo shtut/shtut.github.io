@@ -78,7 +78,21 @@ padding: 5px;
 }
 
 .action-list{
-	background: white;
+	display: none;
+}
+
+.action-list li{
+	background-color: white;
+	width: 100%;
+	text-decoration: none;
+}
+
+.menu-caption:hover +.action-list{
+	display: inline-block;
+}
+
+.action-list:hover{
+	display: inline-block;
 }
 
 

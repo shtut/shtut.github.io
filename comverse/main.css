@@ -263,11 +263,13 @@ ul li ul.dropdown li {
 
 .dropdownList {
   float: left;
-  padding-right: 20%;
+  width: 270px;
 }
 
 .dropdownList a {
   display: block;
+  padding: 5px 0 5px 0;
+  text-transform: capitalize;
 }
 
 .rightMenu {
@@ -308,6 +310,7 @@ ul li ul.dropdown li {
   width: 26px;
   height: 21px;
   float: right;
+  cursor: pointer;
 }
 
 .searchBar .inputText {
@@ -1005,6 +1008,7 @@ footer .blogPost {
   height: 26px;
   width: 30%;
   float: right;
+  cursor: pointer;
 }
 
 #youtube:hover {
