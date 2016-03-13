@@ -135,7 +135,7 @@ padding: 5px;
 /*Tabs area definitions***********************************************/
 
 .tabs{
-	height: calc(100% - 280px);
+	height: calc(100% - 265px);
 	clear: both;
 }
 
@@ -181,6 +181,89 @@ padding: 5px;
 	margin-right: 0;
 }
 
+/*links definitions***********************************************/
+
+.links{
+	padding: 20px;
+
+}
+
+/*frames***********************************************/
+
+.frame{
+	padding: 10px;
+	position: relative;
+	height: calc(100% - 90px);
+	display: none;
+}
+
+.current-frame{
+	display: block;
+}
+
+.frame iframe{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*site-setter definitions***********************************************/
+
+.set-site{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.15);
+	position: absolute;
+	width: calc(100% - 15px);
+	z-index: 999;
+	box-sizing: border-box;
+}
+
+.set-line{
+	background-color: lightgray;
+	margin: 10px;
+}
+
+.name-url{
+	display: inline-block;
+	padding: 10px;
+}
+
+.name-url li{
+	padding-right: 150px;
+	float: left;
+}
+
+.name-url li:last-child{
+	padding-right: 0;
+}
+
+.name-url input{
+	width: auto;
+}
+
+.save-btn{
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 10px 25px 10px 25px;
+	float: right;
+}
+
+.cancel-btn{
+	background-color: white;
+	border: none;
+	text-decoration: underline;
+	padding: 10px 25px 10px 25px;
+	float: right;
+}
+
+.clear{
+	clear: both;
+}
+
+
+
 /**********************************************************************************/
 
 
@@ -189,5 +272,13 @@ padding: 5px;
     width: 100%;
     overflow-x: hidden;
   }
+
+}
+
+@media (max-width:540px) {
+	.nav-section{
+		width: 100%;
+
+	}
 
 }
