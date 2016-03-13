@@ -16,7 +16,7 @@ function loadJSON(url, callback) {
  loadJSON('data/config.json',function(response) {
   // Parse JSON string into object
     var actual_JSON = JSON.parse(response);
-    updateNotificationArea(actual_JSON.notifications);
+    updateNotificationArea(actual_JSON.notification);
 
  });
 }
