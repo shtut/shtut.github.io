@@ -96,7 +96,7 @@ function loadJSON(url, callback) {
 // };
 
     updatePage(actual_JSON);
-    updateNotificationArea(actual_JSON.notification);
+    tabChange();
 
  });
 }
@@ -107,7 +107,7 @@ function updatePage(data){
     updateNotificationArea(data.notification);
     updateNavSection(data.quickActions);
     updateTabs(data.tabsList);
-    tabChange();
+    
 
 }
 
@@ -145,6 +145,14 @@ function updateTabs(data){
     $("#my-folder-frame").src = data[1].options.url;
     //$("#publicFoldersExpandTarget").href = data[3].options.url;
     $("#public-folder-frame").src = data[3].options.url;
+
+    var frames = $all("iframe");
+    var expands = $all(".expand-link");
+
+    for(var i=0; i<data.length;i++){
+        expands[i].href = frames[i].src;
+
+    }
 }
 
 
@@ -180,6 +188,9 @@ function tabChange(){
       }
 }
 
+
+
+/*************************Helper Functions********************************/
 function $(selector) {
     return document.querySelector(selector);
 }

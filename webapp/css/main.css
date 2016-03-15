@@ -149,6 +149,17 @@ padding: 5px;
 	height: calc(100% - 40px);
 }
 
+.tab-area .icon{
+	float: right;
+	margin-left: 10px;
+}
+
+.links{
+	float: left;
+	background-color: white;
+	width: 100px;
+}
+
 .tab-content{
 	width: 100%;
 	clear: both;
@@ -215,6 +226,7 @@ padding: 5px;
 	width: calc(100% - 15px);
 	z-index: 99;
 	box-sizing: border-box;
+	display: none;
 }
 
 .set-line{
