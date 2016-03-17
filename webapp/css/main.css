@@ -207,7 +207,6 @@ padding: 5px;
 	padding: 10px;
 	position: relative;
 	height: calc(100% - 120px);
-	display: none;
 }
 
 .current-frame{
@@ -230,7 +229,6 @@ padding: 5px;
 	width: calc(100% - 15px);
 	z-index: 99;
 	box-sizing: border-box;
-	display: none;
 }
 
 .set-line{
