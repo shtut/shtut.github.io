@@ -189,12 +189,31 @@ padding: 5px;
 .links{
 	padding: 20px;
 	float: left;
-	//background-color: white;
-	width: 100px;
+	position: absolute;
+	display: block;
+	z-index: 9;
+	width: 200px;
 }
 
 .links li{
 	background-color: white;
+	display: none;
+}
+
+.links li:first-child{
+	display: block;
+}
+
+.links li a{
+	display: block;
+}
+
+.links:hover li{
+	display: block;
+}
+
+.links li:hover{
+	background-color: #F1F1F1;
 }
 
 /*frames***********************************************/

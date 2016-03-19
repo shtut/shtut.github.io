@@ -78,14 +78,15 @@ function initialize() {
 //         }
 //     ]
 // };
-
-    updatePage(actual_JSON);
+	
+//     updatePage(actual_JSON);
 
 }
 
 function updatePage(data){
     updateNotificationArea(data.notification);
     updateNavSection(data.quickActions);
+    loadLinks();
     updateTabs(data.tabsList);
 }
 
@@ -156,6 +157,9 @@ function updateTabs(data){
 		$('#folders-options').classList.toggle('active');
 	});
 
+	//set the save button of the "my team folders" section
+	$("#folders-save").addEventListener('click', save);
+
 	//set the options button of the "quick reports" section
 	$("#report-options").addEventListener('click', function(){
 		$('#report-set').classList.toggle('hidden');
@@ -168,6 +172,9 @@ function updateTabs(data){
 		$('#report-set').classList.toggle('hidden');
 		$('#report-options').classList.toggle('active');
 	});
+
+	//set the save button of the "my team folders" section
+	$("#report-save").addEventListener('click', save);
 
     //subscribe to hash changes
     window.addEventListener("hashchange", tabChange, false);
@@ -201,16 +208,132 @@ function tabChange(){
       
 }
 
+function save(){
+	var hash = window.location.hash.substr(1);
+	var saveStr = "";
 
-// function toggleVisibility(){
-// 	divs = $all(".set-site");
-// 	buttons = $all(".options-icon")
+	//if we're in the my-team-folder section
+	if(hash.indexOf("folder") > -1){
+		var lines = $all("#folders-set .name-url");
+		for(var i=0;i<lines.length;i++){
+			var name = "#folder-name-"+(i+1);
+			var url = "#folder-url-"+(i+1);
+			var result= validateLine($(name).value,$(url).value);
 
-// 	for(var i=0;i<divs.length;i++){
-// 		divs[i].classList.toggle("hidden");
-// 		buttons[i].classList.toggle("active");
-//     }
-// }
+			//if line is valid, save it
+			if(result == 1){
+				//saveLink("#folder-links",$(name).value,$(url).value);
+				$("#folder-links").innerHTML += "<li><a href="+$(url).value+">"+$(name).value+"</a></li>";
+				saveStr += $(name).value+";"+$(url).value+"###";
+			}
+		}
+		//save links
+		saveLink("#folder-links",saveStr);
+		//close window
+		$('#folders-set').classList.toggle('hidden');
+		$('#folders-options').classList.toggle('active');
+
+	}
+	//else- reports section
+	else{
+		var lines = $all("#report-set .name-url");
+		for(var i=0;i<lines.length;i++){
+			var name = "#report-name-"+(i+1);
+			var url = "#report-url-"+(i+1);
+			var result= validateLine($(name).value,$(url).value);
+
+			//if line is valid, save it
+			if(result == 1){
+				//saveLink("#report-links",$(name).value,$(url).value);
+				$("#report-links").innerHTML += "<li><a href="+$(url).value+">"+$(name).value+"</a></li>";
+				saveStr += $(name).value+";"+$(url).value+"###";
+			}
+		}
+		//save links
+		saveLink("#report-links",saveStr);
+		//close window
+		$('#report-set').classList.toggle('hidden');
+		$('#report-options').classList.toggle('active');
+	}
+	//update links after save
+	loadLinks();
+}
+
+function validateLine(name, url){
+	//if only 1 of the fields is full- return error
+	if(((name === "")&&(url !=="")) ||
+		((url === "")&&(name !==""))){
+		var x= "error";
+	}
+	//if both are empty- return ok;
+	else if(name === "" && url === ""){
+		return 1;
+	}
+
+	//if both are full- verify url is valid
+	else{
+		var reg = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:/~+#-]*[\w@?^=%&amp;/~+#-])?/;
+		var m;
+		//if valid- return ok
+		if ((m = reg.exec(url)) !== null) {
+        	return 1;
+    	}
+    	//else- return error
+    	else{
+    		return -1;
+    	}
+	}
+}
+
+//saves links in the format:  name1;url1###name2;url2###..
+function saveLink(list,str){
+	//if we're under 'my-team-folder'
+	if(list.indexOf("folder") > -1){
+		localStorage.folderLinks = str;
+
+	//else- we're under 'quick-reports'
+	}else{
+		localStorage.reportLinks= str;
+		
+	}	
+}
+
+function loadLinks(){
+	//delete all previous li items
+	lists= $all(".links");
+	for(var i=0;i<lists.length;i++){
+		lists[i].innerHTML="";
+	}
+	//update li items
+	if(localStorage.folderLinks){
+		lines = localStorage.folderLinks.split("###");
+		for(var i=0;i<lines.length;i++){
+			nameUrl= lines[i].split(";");
+			name = nameUrl[0];
+			url = nameUrl[1];
+			//update list
+			$("#folder-links").innerHTML += "<li><a href="+url+">"+name+"</a></li>";
+			//update form
+			$("#folder-name-"+(i+1)).value = name;
+			$("#folder-url-"+(i+1)).value =url;
+		}
+	}
+	if(localStorage.reportLinks){
+		line = localStorage.reportLinks.split("###");
+		for(var i=0;i<line.length;i++){
+			nameUrl= line[i].split(";");
+			name = nameUrl[0];
+			url = nameUrl[1];
+			//update list
+			$("#report-links").innerHTML += "<li><a href="+url+">"+name+"</a></li>";
+			//update form
+			$("#report-name-"+(i+1)).value = name;
+			$("#report-url-"+(i+1)).value =url;
+		}
+		
+	}
+}
+
 
 
 
