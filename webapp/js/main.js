@@ -79,7 +79,7 @@ function initialize() {
 //     ]
 // };
 
-//     updatePage(actual_JSON);
+    updatePage(actual_JSON);
 
 }
 
@@ -143,6 +143,32 @@ function updateTabs(data){
         expands[i].href = frames[i].src;
     }
 
+    //set the options button of the "my team folders" section
+    $("#folders-options").addEventListener('click', function(){
+		$('#folders-set').classList.toggle('hidden');
+		$('#folders-options').classList.toggle('active');
+		$('.folder-name').focus();
+	});
+
+    //set the cancel button of the "my team folders" section
+	$("#folders-cancel").addEventListener('click', function(){
+		$('#folders-set').classList.toggle('hidden');
+		$('#folders-options').classList.toggle('active');
+	});
+
+	//set the options button of the "quick reports" section
+	$("#report-options").addEventListener('click', function(){
+		$('#report-set').classList.toggle('hidden');
+		$('#report-options').classList.toggle('active');
+		$('.report-name').focus();
+	});
+
+	//set the cancel button of the "quick reports" section
+	$("#report-cancel").addEventListener('click', function(){
+		$('#report-set').classList.toggle('hidden');
+		$('#report-options').classList.toggle('active');
+	});
+
     //subscribe to hash changes
     window.addEventListener("hashchange", tabChange, false);
 }
@@ -174,6 +200,18 @@ function tabChange(){
       }
       
 }
+
+
+// function toggleVisibility(){
+// 	divs = $all(".set-site");
+// 	buttons = $all(".options-icon")
+
+// 	for(var i=0;i<divs.length;i++){
+// 		divs[i].classList.toggle("hidden");
+// 		buttons[i].classList.toggle("active");
+//     }
+// }
+
 
 
 function $(selector) {

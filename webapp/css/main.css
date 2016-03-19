@@ -153,16 +153,6 @@ padding: 5px;
 	height: calc(100% - 40px);
 }
 
-.tab-area .icon{
-	float: right;
-	margin-left: 10px;
-}
-
-.links{
-	float: left;
-	background-color: white;
-	width: 100px;
-}
 
 .tab-content{
 	width: 100%;
@@ -198,7 +188,13 @@ padding: 5px;
 
 .links{
 	padding: 20px;
+	float: left;
+	//background-color: white;
+	width: 100px;
+}
 
+.links li{
+	background-color: white;
 }
 
 /*frames***********************************************/
@@ -224,11 +220,12 @@ padding: 5px;
 .set-site{
 	background-color: white;
 	padding: 20px;
-	box-shadow: 0 0 10px 5px rgba(0,0,0,0.15);
+	box-shadow: 0 5px 5px 0px rgba(0,0,0,0.15);
 	position: absolute;
 	width: calc(100% - 15px);
 	z-index: 99;
 	box-sizing: border-box;
+	margin-top: 60px;
 }
 
 .set-line{
@@ -274,6 +271,16 @@ padding: 5px;
 	clear: both;
 }
 
+
+.options-icon , .expand-icon{
+	float: right;
+	padding: 15px 10px 15px 10px;
+	margin-top: 10px;
+}
+
+.options-icon.active{
+	background-color: white;
+}
 
 
 /**********************************************************************************/
