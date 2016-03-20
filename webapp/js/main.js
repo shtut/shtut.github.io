@@ -207,6 +207,7 @@ function tabChange(){
 function save(){
 	var hash = window.location.hash.substr(1);
 	var saveStr = "";
+	var errorFlag = false;
 
 	//if we're in the my-team-folder section
 	if(hash.indexOf("team") > -1){
@@ -221,13 +222,37 @@ function save(){
 				//saveLink("#folder-links",$(name).value,$(url).value);
 				$("#folder-links").innerHTML += "<li><a href="+$(url).value+">"+$(name).value+"</a></li>";
 				saveStr += $(name).value+";"+$(url).value+"###";
+				$(name).classList.remove("error");
+				$(url).classList.remove("error");
+			}else{
+				if(result=="name"){
+					$(name).value = "must enter name";
+					$(name).classList.add("error");
+					$(url).classList.remove("error");
+				}
+				if(result=="url"){
+					$(url).value = "must enter url";
+					$(url).classList.add("error");
+					$(name).classList.remove("error");
+				}
+				if(result=="invalid"){
+					$(url).value = "invalid url format";
+					$(url).classList.add("error");
+					$(name).classList.remove("error");
+				}
+				errorFlag=true;
+				break;
 			}
 		}
-		//save links
-		saveLink("#folder-links",saveStr);
-		//close window
-		$('#folders-set').classList.toggle('hidden');
-		$('#folders-options').classList.toggle('active');
+		if(!errorFlag){
+			//save links
+			saveLink("#folder-links",saveStr);
+			//close window
+			$('#folders-set').classList.toggle('hidden');
+			$('#folders-options').classList.toggle('active');
+			//update links after save
+			loadLinks();
+		}
 
 	}
 	//else- reports section
@@ -243,23 +268,49 @@ function save(){
 				//saveLink("#report-links",$(name).value,$(url).value);
 				$("#report-links").innerHTML += "<li><a href="+$(url).value+">"+$(name).value+"</a></li>";
 				saveStr += $(name).value+";"+$(url).value+"###";
+				$(name).classList.remove("error");
+				$(url).classList.remove("error");
+			}else{
+				if(result=="name"){
+					$(name).value = "must enter name";
+					$(name).classList.add("error");
+					$(url).classList.remove("error");
+				}
+				if(result=="url"){
+					$(url).value = "must enter url";
+					$(url).classList.add("error");
+					$(name).classList.remove("error");
+				}
+				if(result=="invalid"){
+					$(url).value = "invalid url format";
+					$(url).classList.add("error");
+					$(name).classList.remove("error");
+				}
+				errorFlag=true;
+				break;
 			}
 		}
-		//save links
-		saveLink("#report-links",saveStr);
-		//close window
-		$('#report-set').classList.toggle('hidden');
-		$('#report-options').classList.toggle('active');
+		if(!errorFlag){
+			//save links
+			saveLink("#report-links",saveStr);
+			//close window
+			$('#report-set').classList.toggle('hidden');
+			$('#report-options').classList.toggle('active');
+			//update links after save
+			loadLinks();
+		}
+		
 	}
-	//update links after save
-	loadLinks();
+	
 }
 
 function validateLine(name, url){
 	//if only 1 of the fields is full- return error
-	if(((name === "")&&(url !=="")) ||
-		((url === "")&&(name !==""))){
-		var x= "error";
+	if((name === "")&&(url !=="")){
+		return "name";
+	}
+	if((url === "")&&(name !=="")){
+		return "url";
 	}
 	//if both are empty- return ok;
 	else if(name === "" && url === ""){
@@ -276,7 +327,7 @@ function validateLine(name, url){
     	}
     	//else- return error
     	else{
-    		return -1;
+    		return "invalid";
     	}
 	}
 }
@@ -355,6 +406,7 @@ function setLinks(){
 			$("#selected-report a").innerHTML = this.innerHTML;
 			$("#selected-report a").title = this.title;
 			linkToFrame();
+			updateExpandLinks();
 	});
 	}
 
@@ -364,6 +416,7 @@ function setLinks(){
 			$("#selected-folder a").innerHTML = this.innerHTML;
 			$("#selected-folder a").title = this.title;
 			linkToFrame();
+			updateExpandLinks();
 	});
 	}
 }
