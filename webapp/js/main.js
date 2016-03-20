@@ -349,20 +349,20 @@ function loadLinks(){
 
 //
 function setLinks(){
-	var reports = $all("#report-links li");
+	var reports = $all("#report-links li a");
 	for(var i=1;i <reports.length;i++){
 		reports[i].addEventListener('click',  function(){
-			$("#selected-report a").innerHTML = reports[i].innerHTML;
-			$("#selected-report a").title = reports[i].title;
+			$("#selected-report a").innerHTML = this.innerHTML;
+			$("#selected-report a").title = this.title;
 			linkToFrame();
 	});
 	}
 
-	var folders = $all("#folder-links li");
+	var folders = $all("#folder-links li a");
 	for(var i=1;i <folders.length;i++){
 		folders[i].addEventListener('click', function(){
-			$("#selected-folder a").innerHTML = folders[i].innerHTML;
-			$("#selected-folder a").title = folders[i].title;
+			$("#selected-folder a").innerHTML = this.innerHTML;
+			$("#selected-folder a").title = this.title;
 			linkToFrame();
 	});
 	}
