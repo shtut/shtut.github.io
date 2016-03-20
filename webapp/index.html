@@ -21,7 +21,7 @@
 	</header>
 
 	<section class="page-body layout-wrap">
-		<div class="notifications hidden">No notifications</div>
+		<div class="notifications hidden"></div>
 
 		<nav>
 			<div class="nav-section">
@@ -79,7 +79,9 @@
 			<div class="tab-area">
 
 				<div id="quick-reports" class="frame hidden">
-					<ul class="links" id="report-links"></ul>
+					<ul class="links" id="report-links">
+						<li id="selected-report"><a></a></li>
+					</ul>
 					
 					<img src="img/icons/settings.png" alt="options" class="icon options-icon" id="report-options">
 
@@ -142,7 +144,6 @@
 				</div>
 
 				<div id="my-folders" class="frame hidden">
-					<ul class="links"></ul>
 
 					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="icon expand-icon"></a>
 					
@@ -150,7 +151,9 @@
 				</div>
 
 				<div id="my-team-folders" class="frame hidden">
-					<ul class="links" id="folder-links"></ul>
+					<ul class="links" id="folder-links">
+						<li id="selected-folder"><a></a></li>
+					</ul>
 
 					<img src="img/icons/settings.png" alt="options" class="icon options-icon" id="folders-options">
 					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="expand-icon"></a>
@@ -212,7 +215,6 @@
 				</div>
 
 				<div id="public-folders" class="frame hidden">
-					<ul class="links"></ul>
 
 					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="icon expand-icon"></a>
 					

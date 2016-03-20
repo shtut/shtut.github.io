@@ -73,7 +73,7 @@ function initialize() {
 //             }
 //         }, {
 //             "options": {
-//                 "url": "http://addyosmani.com/"
+//                 "url": "http://hackertyper.com/"
 //             }
 //         }
 //     ]
@@ -88,12 +88,13 @@ function updatePage(data){
     updateNavSection(data.quickActions);
     loadLinks();
     updateTabs(data.tabsList);
+    linkToFrame();
 }
 
 function updateNotificationArea(data){
 	//if there are notifications- update html and remove the hidden class
     if(data != undefined && data!=""){
-        $(".notifications").innerHTML = data;
+        $(".notifications").innerHTML += data;
         $(".notifications").classList.remove('hidden');
     }
     //if notifications were removed- hide notifications area
@@ -135,20 +136,15 @@ function updateTabs(data){
     //if empty- sets first tab as active
     tabChange();
 
+    //updates expand icons
+    updateExpandLinks();
 
-    var frames = $all("iframe");
-    var expands = $all(".expand-link");
-
-    //update expand buttons to match frame links
-    for(var i=0; i<data.length;i++){
-        expands[i].href = frames[i].src;
-    }
 
     //set the options button of the "my team folders" section
     $("#folders-options").addEventListener('click', function(){
 		$('#folders-set').classList.toggle('hidden');
 		$('#folders-options').classList.toggle('active');
-		$('.folder-name').focus();
+		$('#folder-name-1').focus();
 	});
 
     //set the cancel button of the "my team folders" section
@@ -164,7 +160,7 @@ function updateTabs(data){
 	$("#report-options").addEventListener('click', function(){
 		$('#report-set').classList.toggle('hidden');
 		$('#report-options').classList.toggle('active');
-		$('.report-name').focus();
+		$('#report-name-1').focus();
 	});
 
 	//set the cancel button of the "quick reports" section
@@ -213,7 +209,7 @@ function save(){
 	var saveStr = "";
 
 	//if we're in the my-team-folder section
-	if(hash.indexOf("folder") > -1){
+	if(hash.indexOf("team") > -1){
 		var lines = $all("#folders-set .name-url");
 		for(var i=0;i<lines.length;i++){
 			var name = "#folder-name-"+(i+1);
@@ -295,24 +291,33 @@ function saveLink(list,str){
 	}else{
 		localStorage.reportLinks= str;
 		
-	}	
-}
+	}
+	linkToFrame();	
+}	
 
 function loadLinks(){
 	//delete all previous li items
 	lists= $all(".links");
 	for(var i=0;i<lists.length;i++){
 		lists[i].innerHTML="";
+		var id = (i==0)?"report":"folder";
+		lists[i].innerHTML="<li id='selected-"+id+"'><a></a></li>";
 	}
 	//update li items
 	if(localStorage.folderLinks){
 		lines = localStorage.folderLinks.split("###");
-		for(var i=0;i<lines.length;i++){
+		for(var i=0;i<lines.length-1;i++){
 			nameUrl= lines[i].split(";");
 			name = nameUrl[0];
 			url = nameUrl[1];
 			//update list
-			$("#folder-links").innerHTML += "<li><a href="+url+">"+name+"</a></li>";
+			if(name !== "" && url!==""){
+				$("#folder-links").innerHTML += "<li><a title='"+url+"'>"+name+"</a></li>";
+			}
+			if(i==0){
+				$("#selected-folder a").innerHTML = name;
+				$("#selected-folder a").title = url;
+			}
 			//update form
 			$("#folder-name-"+(i+1)).value = name;
 			$("#folder-url-"+(i+1)).value =url;
@@ -320,20 +325,65 @@ function loadLinks(){
 	}
 	if(localStorage.reportLinks){
 		line = localStorage.reportLinks.split("###");
-		for(var i=0;i<line.length;i++){
+		for(var i=0;i<line.length-1;i++){
 			nameUrl= line[i].split(";");
 			name = nameUrl[0];
 			url = nameUrl[1];
 			//update list
-			$("#report-links").innerHTML += "<li><a href="+url+">"+name+"</a></li>";
+			if(name !== "" && url!==""){
+				$("#report-links").innerHTML += "<li><a title='"+url+"'>"+name+"</a></li>";
+			}
+			if(i==0){
+				$("#selected-report a").innerHTML = name;
+				$("#selected-report a").title = url;
+			}
 			//update form
 			$("#report-name-"+(i+1)).value = name;
 			$("#report-url-"+(i+1)).value =url;
+
+
 		}
-		
+	}
+	setLinks();
+}
+
+//
+function setLinks(){
+	var reports = $all("#report-links li");
+	for(var i=1;i <reports.length;i++){
+		reports[i].addEventListener('click',  function(){
+			$("#selected-report a").innerHTML = reports[i].innerHTML;
+			$("#selected-report a").title = reports[i].title;
+			linkToFrame();
+	});
+	}
+
+	var folders = $all("#folder-links li");
+	for(var i=1;i <folders.length;i++){
+		folders[i].addEventListener('click', function(){
+			$("#selected-folder a").innerHTML = folders[i].innerHTML;
+			$("#selected-folder a").title = folders[i].title;
+			linkToFrame();
+	});
 	}
 }
 
+
+function linkToFrame(){
+	$('#team-folder-frame').src = $("#selected-folder a").title;
+	$('#reports-frame').src = $("#selected-report a").title;
+
+}
+
+function updateExpandLinks(){
+	var frames = $all("iframe");
+    var expands = $all(".expand-link");
+
+    //update expand buttons to match frame links
+    for(var i=0; i<frames.length;i++){
+        expands[i].href = frames[i].src;
+    }
+}
 
 
 

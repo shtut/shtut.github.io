@@ -187,7 +187,7 @@ padding: 5px;
 /*links definitions***********************************************/
 
 .links{
-	padding: 20px;
+	padding-left: 20px;
 	float: left;
 	position: absolute;
 	display: block;
@@ -198,6 +198,7 @@ padding: 5px;
 .links li{
 	background-color: white;
 	display: none;
+	padding: 5px;
 }
 
 .links li:first-child{
@@ -215,6 +216,7 @@ padding: 5px;
 .links li:hover{
 	background-color: #F1F1F1;
 }
+
 
 /*frames***********************************************/
 
