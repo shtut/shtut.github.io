@@ -1,0 +1,16 @@
+section{
+	clear:both;
+}
+
+#whatCan, #happening #slideMachine, .slides .current{
+	height: 200px;
+}
+
+.square{
+	margin-bottom: 10px;
+}
+
+.slidesBtn{
+	margin-left: 20px;
+}
+
