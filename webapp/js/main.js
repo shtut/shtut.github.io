@@ -73,7 +73,7 @@ function initialize() {
 //             }
 //         }, {
 //             "options": {
-//                 "url": "http://hackertyper.com/"
+//                 "url": "http://www.nelson-haha.com/"
 //             }
 //         }
 //     ]
@@ -89,12 +89,18 @@ function updatePage(data){
     loadLinks();
     updateTabs(data.tabsList);
     linkToFrame();
+     $(".search-box input").addEventListener("keypress", function (e) {
+	    var key = e.which || e.keyCode;
+	    if (key === 13) { // 13 is enter
+	      search(this);
+    }
+});
 }
 
 function updateNotificationArea(data){
 	//if there are notifications- update html and remove the hidden class
     if(data != undefined && data!=""){
-        $(".notifications").innerHTML += data;
+        $(".notifications").innerHTML = data;
         $(".notifications").classList.remove('hidden');
     }
     //if notifications were removed- hide notifications area
@@ -436,6 +442,58 @@ function updateExpandLinks(){
     for(var i=0; i<frames.length;i++){
         expands[i].href = frames[i].src;
     }
+}
+
+function search(e){
+	var value = e.value;
+	var found = false;
+
+	if(localStorage.reportLinks){
+		line = localStorage.reportLinks.split("###");
+		for(var i=0;i<line.length-1;i++){
+			nameUrl= line[i].split(";");
+			name = nameUrl[0];
+			url = nameUrl[1];
+			
+			if(name == value){
+				//found
+				window.location.hash = '#quick-reports';
+				$("#selected-report a").title= url;
+				$("#selected-report a").innerHTML= name;
+				found=true;
+				linkToFrame();
+				updateExpandLinks();
+			}
+
+		}
+	}
+
+	if(localStorage.folderLinks){
+		line = localStorage.folderLinks.split("###");
+		for(var i=0;i<line.length-1;i++){
+			nameUrl= line[i].split(";");
+			name = nameUrl[0];
+			url = nameUrl[1];
+			
+			if(name == value){
+				//found
+				window.location.hash = '#my-team-folders';
+				$("#selected-folder a").title= url;
+				$("#selected-folder a").innerHTML= name;
+				found=true;
+				linkToFrame();
+				updateExpandLinks();
+			}
+
+		}
+	}
+
+	if(!found){
+		updateNotificationArea("The searched report "+value+" was not found.");
+	}
+
+	e.value = "";
+
 }
 
 
