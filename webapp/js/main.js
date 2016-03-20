@@ -89,12 +89,7 @@ function updatePage(data){
     loadLinks();
     updateTabs(data.tabsList);
     linkToFrame();
-     $(".search-box input").addEventListener("keypress", function (e) {
-	    var key = e.which || e.keyCode;
-	    if (key === 13) { // 13 is enter
-	      search(this);
-    }
-});
+    setKeypressButtons();   
 }
 
 function updateNotificationArea(data){
@@ -150,7 +145,7 @@ function updateTabs(data){
     $("#folders-options").addEventListener('click', function(){
 		$('#folders-set').classList.toggle('hidden');
 		$('#folders-options').classList.toggle('active');
-		$('#folder-name-1').focus();
+		//$('#folder-name-1').focus();
 	});
 
     //set the cancel button of the "my team folders" section
@@ -166,7 +161,7 @@ function updateTabs(data){
 	$("#report-options").addEventListener('click', function(){
 		$('#report-set').classList.toggle('hidden');
 		$('#report-options').classList.toggle('active');
-		$('#report-name-1').focus();
+		//$('#report-name-1').focus();
 	});
 
 	//set the cancel button of the "quick reports" section
@@ -455,7 +450,7 @@ function search(e){
 			name = nameUrl[0];
 			url = nameUrl[1];
 			
-			if(name == value){
+			if(name.indexOf(value) > -1){
 				//found
 				window.location.hash = '#quick-reports';
 				$("#selected-report a").title= url;
@@ -475,7 +470,7 @@ function search(e){
 			name = nameUrl[0];
 			url = nameUrl[1];
 			
-			if(name == value){
+			if(name.indexOf(value) > -1){
 				//found
 				window.location.hash = '#my-team-folders';
 				$("#selected-folder a").title= url;
@@ -496,6 +491,38 @@ function search(e){
 
 }
 
+function setKeypressButtons(){
+	//search when hitting enter on search form
+	$(".search-box input").addEventListener("keypress", function (e) {
+	    var key = e.which || e.keyCode;
+	    if (key === 13) { // 13 is enter
+	      search(this);
+    }
+	});
+    
+    //close report settings on esc
+    $('#report-set').addEventListener("keyup", function (e) {
+	    var key = e.which || e.keyCode;
+	    if (key === 27) { // 27 is esc
+	      	$('#report-set').classList.toggle('hidden');
+			$('#report-options').classList.toggle('active');
+    	}
+    	if (key === 13) { // 13 is enter
+	      	save();
+    	}
+	});
+	//close folder settings on esc
+    $('#folders-set').addEventListener("keyup", function (e) {
+	    var key = e.which || e.keyCode;
+	    if (key === 27) { // 27 is esc
+	      	$('#folders-set').classList.toggle('hidden');
+			$('#folders-options').classList.toggle('active');
+    	}
+    	if (key === 13) { // 13 is enter
+	      	save();
+    	}
+	});
+}
 
 
 function $(selector) {
