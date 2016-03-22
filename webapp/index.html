@@ -1,232 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Netcraft Web App</title>
+  <title>Netcraft Web App</title>
 
-	<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fonts/style.css">
 </head>
+
 <body>
-	<header>
-		<div class="layout-wrap">
-			<a href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
+  <header>
+    <div class="layout-wrap">
+      <a href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
 
-			<form class="search-box" onsubmit="return false">
-				<input type="search" placeholder="search" title="search">
-			</form>
-		</div>
-	</header>
+      <form class="search-box" onsubmit="return false">
+        <input type="search" placeholder="search" title="search">
+      </form>
+    </div>
+  </header>
 
-	<section class="page-body layout-wrap">
-		<div class="notifications hidden"></div>
+  <section class="page-body layout-wrap">
+    <div class="notifications hidden"></div>
 
-		<nav>
-			<div class="nav-section">
-				<p>Title</p>
+    <nav>
+      <div class="nav-section">
+        <p>Title</p>
 
-				<div class="menu">
-				<div class= "cropped-image" id="leftIm"></div>
-					<div class="menu-caption">
-						<p>Caption</p>
-					</div>
+        <div class="menu">
+          <div class="cropped-image" id="leftIm"></div>
+          <div class="menu-caption">
+            <p>Caption</p>
+          </div>
 
-					<ul class="action-list">
-					</ul>
-				</div>
+          <ul class="action-list">
+          </ul>
+        </div>
 
-			</div>
+      </div>
 
-			<div class="nav-section">
-				<p>Title</p>
+      <div class="nav-section">
+        <p>Title</p>
 
-				<div class="menu">
-				<div class= "cropped-image" id="centerIm"></div>
-					<div class="menu-caption">
-						<p>Caption</p>
-					</div>
+        <div class="menu">
+          <div class="cropped-image" id="centerIm"></div>
+          <div class="menu-caption">
+            <p>Caption</p>
+          </div>
 
-					<ul class="action-list" id="">
-					</ul>
-				</div>
-			</div>
+          <ul class="action-list" id="">
+          </ul>
+        </div>
+      </div>
 
-			<div class="nav-section">
-				<p>Title</p>
+      <div class="nav-section">
+        <p>Title</p>
 
-				<div class="menu">
-				<div class= "cropped-image" id="rightIm"></div>
-					<div class="menu-caption">
-						<p>Caption</p>
-					</div>
+        <div class="menu">
+          <div class="cropped-image" id="rightIm"></div>
+          <div class="menu-caption">
+            <p>Caption</p>
+          </div>
 
-					<ul class="action-list">
-					</ul>
-				</div>
-				</div>
-		</nav>
+          <ul class="action-list">
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-		<section class="tabs">
-			<ul id="tab-headers">
-				<li class="tab-item" id="tab1"><a href="#quick-reports" class="tab-link">Quick Reports</a></li>
-				<li class="tab-item" id="tab2"><a href="#my-folders" class="tab-link">My Folders</a></li>
-				<li class="tab-item" id="tab3"><a href="#my-team-folders" class="tab-link">My Team Folders</a></li>
-				<li class="tab-item" id="tab4"><a href="#public-folders" class="tab-link">Public Folders</a></li>
-			</ul>
+    <section class="tabs">
+      <ul id="tab-headers">
+        <li class="tab-item" id="tab1"><a href="#quick-reports" class="tab-link"><i class="icon-external-link"></i>   Quick Reports</a></li>
+        <li class="tab-item" id="tab2"><a href="#my-folders" class="tab-link"><i class="icon-star-o"></i>   My Folders</a></li>
+        <li class="tab-item" id="tab3"><a href="#my-team-folders" class="tab-link"><i class="icon-folder-open-o"></i>   My Team Folders</a></li>
+        <li class="tab-item" id="tab4"><a href="#public-folders" class="tab-link"><i class="icon-copy"></i>   Public Folders</a></li>
+      </ul>
 
-			<div class="tab-area">
+      <div class="tab-area">
 
-				<div id="quick-reports" class="frame hidden">
-					<ul class="links" id="report-links">
-						<li id="selected-report"><a></a></li>
-					</ul>
-					
-					<button class="icon options-icon" id="report-options"><img src="img/icons/settings.png" alt="options"></button>
+        <div id="quick-reports" class="frame hidden">
+          <ul class="links" id="report-links">
+            <li id="selected-report">
+              <a></a>
+            </li>
+          </ul>
 
-					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="expand-icon"></a>
-					
-					<div class="set-site hidden" id="report-set">
-						<ul>
-							<li class="set-line">
-								Report 01:
-								<ul class="name-url">
-								<li>
-								<label for="report-name-1">Name</label>
-								<input class="name" type="text" id="report-name-1" placeholder=" Site Name" title="site name">
-								</li>
+          <button class="icon options-icon" id="report-options"><img src="img/icons/settings.png" alt="options"></button>
 
-								<li>
-								<label for="report-url-1">URL</label>
-								<input class="url" type="url" id="report-url-1" placeholder=" Site Url" title="site url">
-								</li>
-								</ul>
-							</li>
-							<li class="set-line">
-								Report 02:
-								<ul class="name-url">
-								<li>
-								<label for="report-name-2">Name</label>
-								<input class="name" type="text" id="report-name-2" placeholder=" Site Name" title="site name">
-								</li>
+          <a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="expand-icon"></a>
 
-								<li>
-								<label for="report-url-2">URL</label>
-								<input class="url" type="url" id="report-url-2" placeholder=" Site Url" title="site url">
-								</li>
-								</ul>
-							</li>
-							<li class="set-line">
-								Report 03:
-								<ul class="name-url">
-								<li>
-								<label for="report-name-3">Name</label>
-								<input class="name" type="text" id="report-name-3" placeholder=" Site Name" title="site name">
-								</li>
+          <div class="set-site hidden" id="report-set">
+            <ul>
+              <li class="set-line">
+                Report 01:
+                <ul class="name-url">
+                  <li>
+                    <label for="report-name-1">Name</label>
+                    <input class="name" type="text" id="report-name-1" placeholder=" Site Name" title="site name">
+                  </li>
 
-								<li>
-								<label for="report-url-3">URL</label>
-								<input class="url" type="url" id="report-url-3" placeholder=" Site Url" title="site url">
-								</li>
-								</ul>
-							</li>
-						</ul>
+                  <li>
+                    <label for="report-url-1">URL</label>
+                    <input class="url" type="url" id="report-url-1" placeholder=" Site Url" title="site url">
+                  </li>
+                </ul>
+              </li>
+              <li class="set-line">
+                Report 02:
+                <ul class="name-url">
+                  <li>
+                    <label for="report-name-2">Name</label>
+                    <input class="name" type="text" id="report-name-2" placeholder=" Site Name" title="site name">
+                  </li>
 
+                  <li>
+                    <label for="report-url-2">URL</label>
+                    <input class="url" type="url" id="report-url-2" placeholder=" Site Url" title="site url">
+                  </li>
+                </ul>
+              </li>
+              <li class="set-line">
+                Report 03:
+                <ul class="name-url">
+                  <li>
+                    <label for="report-name-3">Name</label>
+                    <input class="name" type="text" id="report-name-3" placeholder=" Site Name" title="site name">
+                  </li>
 
-						<button class="save-btn" id="report-save">Save</button>
-						<button class="cancel-btn" id="report-cancel">Cancel</button>
-						<div class="clear"></div>
-						
-					</div>
-
-					<iframe src="http://www.w3schools.com" id="reports-frame"></iframe>
-				</div>
-
-				<div id="my-folders" class="frame hidden">
-
-					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="icon expand-icon"></a>
-					
-					<iframe src="http://www.w3schools.com" id="my-folder-frame"></iframe>
-				</div>
-
-				<div id="my-team-folders" class="frame hidden">
-					<ul class="links" id="folder-links">
-						<li id="selected-folder"><a></a></li>
-					</ul>
-
-					<button class="icon options-icon" id="folders-options"><img src="img/icons/settings.png" alt="options"></button>
-
-					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="expand-icon"></a>
-
-					<div class="set-site hidden" id="folders-set">
-						<ul>
-							<li class="set-line">
-								Folder 01:
-								<ul class="name-url">
-								<li>
-								<label for="folder-name-1">Name</label>
-								<input class="name" type="text" id="folder-name-1" placeholder=" Site Name" title="site name" required>
-								</li>
-
-								<li>
-								<label for="folder-url-1">URL</label>
-								<input class="url" type="url" id="folder-url-1" placeholder=" Site Url" title="site url" required>
-								</li>
-								</ul>
-							</li>
-							<li class="set-line">
-								Folder 02:
-								<ul class="name-url">
-								<li>
-								<label for="folder-name-2">Name</label>
-								<input class="name" type="text" id="folder-name-2" placeholder=" Site Name" title="site name">
-								</li>
-
-								<li>
-								<label for="folder-url-2">URL</label>
-								<input class="url" type="url" id="folder-url-2" placeholder=" Site Url" title="site url">
-								</li>
-								</ul>
-							</li>
-							<li class="set-line">
-								Folder 03:
-								<ul class="name-url">
-								<li>
-								<label for="folder-name-3">Name</label>
-								<input class="name" type="text" id="folder-name-3" placeholder=" Site Name" title="site name">
-								</li>
-
-								<li>
-								<label for="folder-url-3">URL</label>
-								<input class="url" type="url" id="folder-url-3" placeholder=" Site Url" title="site url">
-								</li>
-								</ul>
-							</li>
-						</ul>
+                  <li>
+                    <label for="report-url-3">URL</label>
+                    <input class="url" type="url" id="report-url-3" placeholder=" Site Url" title="site url">
+                  </li>
+                </ul>
+              </li>
+            </ul>
 
 
-						<button class="save-btn" id="folders-save">Save</button>
-						<button class="cancel-btn" id="folders-cancel">Cancel</button>
-						<div class="clear"></div>
-						
-					</div>
+            <button class="save-btn" id="report-save">Save</button>
+            <button class="cancel-btn" id="report-cancel">Cancel</button>
+            <div class="clear"></div>
 
-					<iframe src="http://www.w3schools.com" id="team-folder-frame"></iframe>
-				</div>
+          </div>
 
-				<div id="public-folders" class="frame hidden">
+          <iframe src="http://www.w3schools.com" id="reports-frame"></iframe>
+        </div>
 
-					<a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="icon expand-icon"></a>
-					
-					<iframe src="http://www.w3schools.com" id="public-folder-frame"></iframe>
-				</div>
+        <div id="my-folders" class="frame hidden">
 
-			</div>
-		</section>
+          <a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="icon expand-icon"></a>
 
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+          <iframe src="http://www.w3schools.com" id="my-folder-frame"></iframe>
+        </div>
+
+        <div id="my-team-folders" class="frame hidden">
+          <ul class="links" id="folder-links">
+            <li id="selected-folder">
+              <a></a>
+            </li>
+          </ul>
+
+          <button class="icon options-icon" id="folders-options"><img src="img/icons/settings.png" alt="options"></button>
+
+          <a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="expand-icon"></a>
+
+          <div class="set-site hidden" id="folders-set">
+            <ul>
+              <li class="set-line">
+                Folder 01:
+                <ul class="name-url">
+                  <li>
+                    <label for="folder-name-1">Name</label>
+                    <input class="name" type="text" id="folder-name-1" placeholder=" Site Name" title="site name" required>
+                  </li>
+
+                  <li>
+                    <label for="folder-url-1">URL</label>
+                    <input class="url" type="url" id="folder-url-1" placeholder=" Site Url" title="site url" required>
+                  </li>
+                </ul>
+              </li>
+              <li class="set-line">
+                Folder 02:
+                <ul class="name-url">
+                  <li>
+                    <label for="folder-name-2">Name</label>
+                    <input class="name" type="text" id="folder-name-2" placeholder=" Site Name" title="site name">
+                  </li>
+
+                  <li>
+                    <label for="folder-url-2">URL</label>
+                    <input class="url" type="url" id="folder-url-2" placeholder=" Site Url" title="site url">
+                  </li>
+                </ul>
+              </li>
+              <li class="set-line">
+                Folder 03:
+                <ul class="name-url">
+                  <li>
+                    <label for="folder-name-3">Name</label>
+                    <input class="name" type="text" id="folder-name-3" placeholder=" Site Name" title="site name">
+                  </li>
+
+                  <li>
+                    <label for="folder-url-3">URL</label>
+                    <input class="url" type="url" id="folder-url-3" placeholder=" Site Url" title="site url">
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+
+            <button class="save-btn" id="folders-save">Save</button>
+            <button class="cancel-btn" id="folders-cancel">Cancel</button>
+            <div class="clear"></div>
+
+          </div>
+
+          <iframe src="http://www.w3schools.com" id="team-folder-frame"></iframe>
+        </div>
+
+        <div id="public-folders" class="frame hidden">
+
+          <a href="" target="_blank" class="expand-link"><img src="img/icons/expand.png" alt="expand" class="icon expand-icon"></a>
+
+          <iframe src="http://www.w3schools.com" id="public-folder-frame"></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
