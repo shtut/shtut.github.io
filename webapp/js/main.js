@@ -88,6 +88,7 @@ function initialize() {
 }
 
 function updatePage(data) {
+  data = JSON.parse(data);
   updateNotificationArea(data.notification);
   updateNavSection(data.quickActions);
   loadLinks();
